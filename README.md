@@ -162,6 +162,6 @@ What it fetches, hard limits and how redirects work: **[bot.md](bot.md)**.
 
 Available in English, Ukrainian ([/uk](https://sagbot.app/uk)), Spanish ([/es](https://sagbot.app/es)),
 Portuguese ([/pt](https://sagbot.app/pt)), German ([/de](https://sagbot.app/de)),
-French ([/fr](https://sagbot.app/fr)) and Polish ([/pl](https://sagbot.app/pl)).
+French ([/fr](https://sagbot.app/fr)), Polish ([/pl](https://sagbot.app/pl)) and Italian ([/it](https://sagbot.app/it)).
 
 Made in Ukraine.
