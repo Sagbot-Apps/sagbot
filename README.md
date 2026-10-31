@@ -1,6 +1,7 @@
 # SagBot: free AI-readiness checker for websites
 
 [![Scan your site](https://img.shields.io/badge/Scan%20your%20site-sagbot.app-111?style=for-the-badge)](https://sagbot.app/)
+[![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app)
 
 **[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 40 checks,
 then gives two scores out of 100: **Agent-ready** (can AI bots and agents reach and use the site) and
@@ -12,7 +13,7 @@ No account. No install. About 20 seconds per scan.
 [![SagBot: see your site the way AI bots and agents do](https://sagbot.app/og-image.png)](https://sagbot.app/)
 
 **Run a scan:** [sagbot.app](https://sagbot.app/) ·
-**Prefill a domain:** `https://sagbot.app/?domain=example.com` ·
+**Scan from a link:** `https://sagbot.app/?domain=example.com` ·
 **All 40 checks:** [checks.md](checks.md)
 
 ## Contents
@@ -20,6 +21,7 @@ No account. No install. About 20 seconds per scan.
 - [What does SagBot check?](#what-does-sagbot-check)
 - [How are the scores calculated?](#how-are-the-scores-calculated)
 - [How does a scan work?](#how-does-a-scan-work)
+- [Add a score badge to your site](#add-a-score-badge-to-your-site)
 - [Who is SagBot for?](#who-is-sagbot-for)
 - [Guides](#guides)
 - [FAQ](#faq)
@@ -67,11 +69,39 @@ fail earns nothing.
 
 1. Enter a domain on [sagbot.app](https://sagbot.app/) and pick a site type.
 2. SagBot reads `robots.txt`, the homepage (as HTML and as Markdown), the sitemap, `llms.txt` and a few `/.well-known` files.
-3. It runs the checks, scores them and gives the report its own share link: `https://sagbot.app/r/{id}`.
+3. It runs the checks, scores them and shows the report on the domain's page: `https://sagbot.app/d/{host}`.
 4. Copy one fix, or all of them as a single prompt, into your coding agent and review the changes before you ship.
 
-The latest report for any host lives at `https://sagbot.app/d/{host}`. Every SagBot page is also
-served as Markdown: `curl -H 'Accept: text/markdown' https://sagbot.app/r/{id}`.
+Each domain has one page, and it always shows the latest result, so that's the link to share. Older
+`/r/{id}` links redirect to it. Every SagBot page is also served as Markdown:
+`curl -H 'Accept: text/markdown' https://sagbot.app/d/{host}`.
+
+## Add a score badge to your site
+
+Show your scores on your site or GitHub profile. The badge is live: it updates within an hour of a new
+scan and links to your report.
+
+| Look | Example | Image URL |
+|---|---|---|
+| Full | [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app) | `https://sagbot.app/badge/{host}.svg` |
+| Compact | [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg?style=compact)](https://sagbot.app/d/sagbot.app) | `https://sagbot.app/badge/{host}.svg?style=compact` |
+
+Markdown:
+
+```markdown
+[![SagBot score for example.com](https://sagbot.app/badge/example.com.svg)](https://sagbot.app/d/example.com)
+```
+
+HTML:
+
+```html
+<a href="https://sagbot.app/d/example.com" target="_blank" rel="noopener">
+  <img src="https://sagbot.app/badge/example.com.svg" alt="SagBot score for example.com" />
+</a>
+```
+
+Every report has a generator that fills in your domain. `Agent` on the badge is the Agent-ready score
+and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `not scanned`.
 
 ## Who is SagBot for?
 
@@ -129,6 +159,12 @@ Whether an engine cites you also depends on your site's authority and on what pe
 No. A scan makes a handful of GET and HEAD requests. Each request stops after 8 seconds or 2 MB, and
 a finished result is reused for an hour.
 
+### Can a SagBot report appear in Google?
+
+Yes. Reports are public, and the English page of a domain with two or more complete scans can be
+indexed. To remove it, add the opt-out rule below to your `robots.txt`, then scan your site once. SagBot
+doesn't crawl, so the rule takes effect at that scan.
+
 ### How do I apply the fixes?
 
 Copy one fix, or all of them as one prompt, paste it into Claude Code, Cursor or Copilot in your
@@ -148,6 +184,9 @@ To opt out, add this to your `robots.txt`:
 User-agent: SagBot
 Disallow: /
 ```
+
+The opt-out takes effect the next time someone scans your site, so run one scan after adding it: the
+report then leaves Google and your badge shows `not scanned`.
 
 What it fetches, hard limits and how redirects work: **[bot.md](bot.md)**.
 
