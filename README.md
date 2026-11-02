@@ -22,6 +22,7 @@ No account. No install. About 20 seconds per scan.
 - [How are the scores calculated?](#how-are-the-scores-calculated)
 - [How does a scan work?](#how-does-a-scan-work)
 - [Add a score badge to your site](#add-a-score-badge-to-your-site)
+- [Free tools](#free-tools)
 - [Who is SagBot for?](#who-is-sagbot-for)
 - [Guides](#guides)
 - [FAQ](#faq)
@@ -103,6 +104,23 @@ HTML:
 Every report has a generator that fills in your domain. `Agent` on the badge is the Agent-ready score
 and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `not scanned`.
 
+## Free tools
+
+Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tools) checks one thing about a domain.
+
+| Tool | What it answers |
+|---|---|
+| [llms.txt checker](https://sagbot.app/tools/llms-txt-checker) | Does this site serve a well-formed `llms.txt` file? |
+| [AI bots in robots.txt](https://sagbot.app/tools/ai-bots-robots-checker) | What does this site's `robots.txt` tell AI bots? |
+| [Schema checker](https://sagbot.app/tools/schema-checker) | Is the JSON-LD on this homepage valid? |
+| [Open Page Rank checker](https://sagbot.app/tools/open-page-rank-checker) | What is this domain's Open Page Rank score? |
+| [SSL checker](https://sagbot.app/tools/ssl-checker) | What SSL/TLS grade does this site get? |
+| [AI agent checkout checker](https://sagbot.app/tools/agent-checkout-checker) | Can AI shopping agents reach this store's checkout, according to a saved check? |
+| [Whois lookup](https://sagbot.app/tools/whois-lookup) | Who registered this domain, and when does it expire? |
+| [Security headers checker](https://sagbot.app/tools/security-headers-checker) | What HTTP security grade does this site get? |
+| [Wayback Machine checker](https://sagbot.app/tools/wayback-checker) | When was this domain first and last archived? |
+| [Wikipedia and Wikidata checker](https://sagbot.app/tools/wikipedia-wikidata-checker) | Does Wikidata list this domain as an official website? |
+
 ## Who is SagBot for?
 
 AI readiness isn't one team's job. Each check lands with whoever owns that part of the site.
@@ -172,7 +190,7 @@ site's repo, and review the changes before you ship. Fixes are always in English
 
 ## For site owners: the SagBot fetcher
 
-SagBot visits a site only when someone asks for a scan of it. No crawling, no schedule.
+SagBot visits a site only when someone runs a scan or a free tool on it. No crawling, no schedule.
 
 ```http
 User-Agent: SagBot/1.0 (+https://sagbot.app/bot)
@@ -188,13 +206,14 @@ Disallow: /
 The opt-out takes effect the next time someone scans your site, so run one scan after adding it: the
 report then leaves Google and your badge shows `not scanned`.
 
-What it fetches, hard limits and how redirects work: **[bot.md](bot.md)**.
+What it fetches, hard limits, how redirects work and how free tools behave: **[bot.md](bot.md)**.
 
 ## Links
 
 - Website: [sagbot.app](https://sagbot.app/)
 - How SagBot works: [sagbot.app/bot](https://sagbot.app/bot)
 - Who it's for: [sagbot.app/for](https://sagbot.app/for)
+- Free tools: [sagbot.app/tools](https://sagbot.app/tools)
 - `llms.txt`: [sagbot.app/llms.txt](https://sagbot.app/llms.txt)
 - Privacy: [sagbot.app/privacy](https://sagbot.app/privacy)
 - Contact: [bot@sagbot.app](mailto:bot@sagbot.app)
