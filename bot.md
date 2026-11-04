@@ -15,6 +15,12 @@ User-Agent: SagBot/1.0 (+https://sagbot.app/bot)
 
 The `robots.txt` token is `SagBot`.
 
+Each request is also signed with [Web Bot Auth](https://developers.cloudflare.com/bots/reference/bot-verification/web-bot-auth/)
+(HTTP message signatures, Ed25519): `Signature-Agent: "https://sagbot.app"` plus `Signature-Input` and
+`Signature` headers. The public key is at
+[`https://sagbot.app/.well-known/http-message-signatures-directory`](https://sagbot.app/.well-known/http-message-signatures-directory),
+so you can check a request really comes from SagBot.
+
 ## What does a scan fetch?
 
 At most these requests, in this order. `robots.txt` comes first and can stop the scan; the rest go out together.
@@ -66,8 +72,13 @@ Disallow: /
 SagBot reads `robots.txt` before anything else, so after this it makes no other request to your
 site. Anyone who tries to scan your site sees "Couldn't scan — site opted out of SagBot".
 
-Only a group for SagBot counts. A site-wide `User-agent: *` block doesn't opt you out, because it's
-usually there by accident.
+SagBot also follows a site-wide `User-agent: *` group: if it disallows `/`, SagBot stays out. To let
+SagBot in anyway, give it its own group:
+
+```text
+User-agent: SagBot
+Allow: /
+```
 
 ## Contact
 

@@ -206,6 +206,9 @@ Disallow: /
 The opt-out takes effect the next time someone scans your site, so run one scan after adding it: the
 report then leaves Google and your badge shows `not scanned`.
 
+A site-wide `User-agent: *` / `Disallow: /` keeps SagBot out too. Requests are signed with Web Bot Auth;
+the public key is at `https://sagbot.app/.well-known/http-message-signatures-directory`.
+
 What it fetches, hard limits, how redirects work and how free tools behave: **[bot.md](bot.md)**.
 
 ## Links
