@@ -97,9 +97,9 @@ Run a free scan at **[sagbot.app](https://sagbot.app/)** and choose **API or app
 check comes with a fix to paste into a coding agent.
 
 SagBot also checks an agent skills index, an `ai-catalog` and Personal Agent Protocol discovery for
-API and app sites. See [all 40 checks](../checks.md#protocol-discovery).
+API and app sites. See [all 44 checks](../checks.md#protocol-discovery).
 
 ---
 
 **Also for your team:** [Developers](developers.md) · [Marketing and PR](marketing.md) · [SEO teams](seo.md) · [Content teams](content.md) · [Online shops](shops.md)
-**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 40 checks](../checks.md)
+**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 44 checks](../checks.md)

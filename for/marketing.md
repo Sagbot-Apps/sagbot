@@ -1,8 +1,8 @@
 # AI visibility for marketing and PR: get your brand named in AI answers
 
 **Will AI answers recognise and name your brand?** ChatGPT, Perplexity and Google's AI Overviews pick
-a handful of sources for every answer. To be one of them, an answer engine first has to be sure who
-you are. That depends on one consistent name, Organization data, `sameAs` profiles and good link
+a handful of sources for every answer. Google picks from pages it has indexed and may show as a snippet;
+to name you correctly, any answer engine also has to be sure who you are. That depends on one consistent name, Organization data, `sameAs` profiles and good link
 previews. Mostly copy and profile work, not code.
 
 [Check your site with SagBot](https://sagbot.app/) · [Full page on sagbot.app](https://sagbot.app/for/marketing) · [README](../README.md#who-is-sagbot-for)
@@ -94,4 +94,4 @@ failing check, ready to hand to your developer.
 ---
 
 **Also for your team:** [Developers](developers.md) · [SEO teams](seo.md) · [Content teams](content.md) · [Online shops](shops.md) · [SaaS and API products](saas.md)
-**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 40 checks](../checks.md)
+**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 44 checks](../checks.md)

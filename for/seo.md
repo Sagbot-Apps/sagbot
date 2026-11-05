@@ -102,4 +102,4 @@ GEO and AEO, so you can see where classic SEO stops and the rest begins.
 ---
 
 **Also for your team:** [Developers](developers.md) · [Marketing and PR](marketing.md) · [Content teams](content.md) · [Online shops](shops.md) · [SaaS and API products](saas.md)
-**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 40 checks](../checks.md)
+**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 44 checks](../checks.md)

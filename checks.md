@@ -1,6 +1,6 @@
-# All 40 SagBot checks: AI readiness, SEO, GEO and AEO
+# All 44 SagBot checks: AI readiness, SEO, GEO and AEO
 
-SagBot runs 40 checks on a site and groups them into four buckets. **Agent** checks make up the
+SagBot runs 44 checks on a site and groups them into four buckets. **Agent** checks make up the
 Agent-ready score. **SEO**, **GEO** and **AEO** checks make up the Answer-ready score (the average of
 the three). Each check below lists its weight in its bucket and the site types it runs for, and links to the spec or documentation it follows.
 
@@ -71,10 +71,13 @@ The classic search basics that AI answers are still built on.
 |---|---|---|---|---|
 | [Homepage status code](https://developers.google.com/search/docs/crawling-indexing/http-network-errors) | `seo-status` | 3 | Indexing | Crawlers only index pages that answer 200 OK. |
 | [Indexable homepage](https://developers.google.com/search/docs/crawling-indexing/block-indexing) | `seo-indexability` | 3 | Indexing | A noindex keeps the page out of search, and out of AI answers built on search. |
+| [Googlebot allowed](https://developers.google.com/search/docs/appearance/ai-features) | `seo-googlebot` | 3 | Indexing | Google's AI Overviews and AI Mode only use pages Googlebot is allowed to crawl. |
+| [Crawlable links](https://developers.google.com/search/docs/crawling-indexing/links-crawlable) | `seo-crawlable-links` | 1 | Indexing | Crawlers find your other pages only through real `<a href>` links in the HTML. |
 | [Canonical URL](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) | `seo-canonical` | 2 | Indexing | A canonical link tells crawlers which URL is the real one, so signals aren't split. |
 | [HTTPS](https://developers.google.com/search/docs/appearance/page-experience) | `seo-https` | 1 | Indexing | Search engines and AI agents prefer, and some require, secure pages. |
 | [hreflang sanity](https://developers.google.com/search/docs/specialty/international/localized-versions) | `seo-hreflang` | 1 | Indexing | Broken hreflang can show the wrong language version in search and AI answers. |
 | [Page title](https://developers.google.com/search/docs/appearance/title-link) | `seo-title` | 3 | Snippet | The `<title>` is the headline search engines and AI answers show for your site. |
+| [Snippets allowed](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) | `seo-snippet-controls` | 2 | Snippet | Google shows a page in AI Overviews and AI Mode only if it may show a snippet of it. |
 | [Meta description](https://developers.google.com/search/docs/appearance/snippet) | `seo-meta-description` | 2 | Snippet | A good description is often used as the snippet under your result. |
 | [OpenGraph tags](https://ogp.me/) | `seo-opengraph` | 2 | Snippet | OpenGraph tags control how links to your site look when shared or previewed. |
 
@@ -88,11 +91,12 @@ Generative engine optimization: can a model tell who you are and quote you?
 |---|---|---|---|---|
 | [JSON-LD structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) | `geo-jsonld` | 3 | Structured data | JSON-LD gives AI and search engines machine-readable facts about your site. |
 | [Entity type](https://developers.google.com/search/docs/appearance/structured-data/organization) | `geo-entity` | 3 | Entity | An Organization or Person node tells AI who is behind the site, so it can cite you by name. |
+| [Schema matches the page](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) | `geo-schema-visible` | 1 | Structured data | Structured data must describe what visitors see; markup that doesn't match the page is ignored. |
 | [sameAs profile links](https://schema.org/sameAs) | `geo-sameas` | 2 | Entity | sameAs links tie your entity to profiles AI already knows, so it's not confused with others. |
 | [Entity name consistency](https://developers.google.com/search/docs/appearance/site-names) | `geo-entity-name` | 1 | Entity | Using the same name in title, og:site_name and schema helps AI recognise one entity. |
 | [Citable server-rendered text](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) | `geo-citable-text` | 3 | Citability | Most AI crawlers don't run JavaScript: they can only cite text in the HTML. |
 
-All GEO checks run for every site type.
+All GEO checks run for every site type. Schema matching is not applicable when the JSON-LD has no FAQ questions, headlines or product names to compare.
 
 ## AEO checks (Answer-ready score)
 
@@ -100,9 +104,9 @@ Answer engine optimization: does the page hand assistants an answer they can rep
 
 | Check | ID | Weight | Category | Why it matters |
 |---|---|---|---|---|
-| [FAQ / QAPage schema](https://schema.org/FAQPage) | `aeo-faq-schema` | 2 | Answers | FAQPage markup hands answer engines ready-made question/answer pairs. |
+| [FAQ / QAPage schema](https://schema.org/FAQPage) | `aeo-faq-schema` | 2 | Answers | FAQPage markup hands answer engines ready-made question/answer pairs. Google doesn't need it for AI Overviews. |
 | [Concise answer paragraphs](https://developers.google.com/search/docs/appearance/featured-snippets) | `aeo-concise-answers` | 1 | Answers | A short paragraph right under a heading is the passage answer engines quote. |
-| [llms.txt quality](https://llmstxt.org/) | `aeo-llms-quality` | 1 | Answers | A well-formed llms.txt gives AI a curated, quotable map of your site. |
+| [llms.txt quality](https://llmstxt.org/) | `aeo-llms-quality` | Advice | Answers | A well-formed llms.txt gives AI tools a curated map of your site. Google Search doesn't use it. |
 | [Question-style headings](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) | `aeo-question-headings` | Advice | Answers | Headings phrased as questions match how people ask AI assistants. |
 | [Author and date signals](https://developers.google.com/search/docs/appearance/structured-data/article) | `aeo-author-date` | 1 | Trust | Answer engines favour content with a clear author and a visible date. |
 
@@ -120,4 +124,4 @@ Each team guide explains its checks with examples:
 
 ---
 
-See how your site scores on all 40: **[sagbot.app](https://sagbot.app/)**.
+See how your site scores on all 44: **[sagbot.app](https://sagbot.app/)**.

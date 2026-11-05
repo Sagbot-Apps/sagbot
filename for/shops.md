@@ -87,4 +87,4 @@ comes with a fix your developer can paste into a coding agent.
 ---
 
 **Also for your team:** [Developers](developers.md) · [Marketing and PR](marketing.md) · [SEO teams](seo.md) · [Content teams](content.md) · [SaaS and API products](saas.md)
-**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 40 checks](../checks.md)
+**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 44 checks](../checks.md)

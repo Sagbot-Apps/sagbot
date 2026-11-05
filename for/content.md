@@ -40,7 +40,8 @@ question; a few in the right places do the work.
 ## Mark up your questions and answers
 
 Once a page has question headings, FAQPage markup hands answer engines the same pairs in a form they
-don't have to parse. The marked-up text must match what's visible on the page.
+don't have to parse. Google doesn't need it for AI Overviews; the clear questions and answers on the page
+matter more. The marked-up text must match what's visible on the page.
 
 ```json
 {
@@ -101,4 +102,4 @@ rules on every article you publish.
 ---
 
 **Also for your team:** [Developers](developers.md) · [Marketing and PR](marketing.md) · [SEO teams](seo.md) · [Online shops](shops.md) · [SaaS and API products](saas.md)
-**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 40 checks](../checks.md)
+**Guides:** [Improve your GEO](../guides/improve-geo.md) · [AI visibility](../guides/ai-visibility.md) · [All 44 checks](../checks.md)

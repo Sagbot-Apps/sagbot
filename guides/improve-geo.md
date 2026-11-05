@@ -81,7 +81,8 @@ attributed content wins ties.
 ## 7. Publish an llms.txt
 
 Finish with `/llms.txt`: a short Markdown map of your most important pages, each with a line of
-context. It's the cheapest way to point a model at the right pages.
+context. Google Search doesn't use it for AI Overviews, but some AI tools and agents read it, and it's
+cheap to publish.
 
 Example file: [for/developers.md](../for/developers.md#publish-an-llmstxt).
 

@@ -3,7 +3,7 @@
 [![Scan your site](https://img.shields.io/badge/Scan%20your%20site-sagbot.app-111?style=for-the-badge)](https://sagbot.app/)
 [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app)
 
-**[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 40 checks,
+**[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 44 checks,
 then gives two scores out of 100: **Agent-ready** (can AI bots and agents reach and use the site) and
 **Answer-ready** (will AI answer engines such as ChatGPT, Perplexity and Gemini cite it). Every failing
 check comes with a fix written for coding agents: paste it into Claude Code, Cursor or Copilot.
@@ -14,7 +14,7 @@ No account. No install. About 20 seconds per scan.
 
 **Run a scan:** [sagbot.app](https://sagbot.app/) ·
 **Scan from a link:** `https://sagbot.app/?domain=example.com` ·
-**All 40 checks:** [checks.md](checks.md)
+**All 44 checks:** [checks.md](checks.md)
 
 ## Contents
 
@@ -37,8 +37,8 @@ The checks fall into four groups:
 | Group | Score | What it looks at |
 |---|---|---|
 | **Agent** | Agent-ready | Whether AI crawlers, search bots and browsing agents are allowed in, and whether they find Markdown, `llms.txt` and `/.well-known` discovery files once they arrive. |
-| **SEO** | Answer-ready | The basics every answer engine still leans on: status code, HTTPS, indexability, canonical URLs, titles and descriptions. |
-| **GEO** | Answer-ready | How quotable your page is for generative engines: a clear entity, valid JSON-LD, `sameAs` profiles, server-rendered text. |
+| **SEO** | Answer-ready | The basics every answer engine still leans on: status code, HTTPS, indexability, Googlebot access, snippet controls, crawlable links, canonical URLs, titles and descriptions. |
+| **GEO** | Answer-ready | How quotable your page is for generative engines: a clear entity, valid JSON-LD that matches the page, `sameAs` profiles, server-rendered text. |
 | **AEO** | Answer-ready | Whether questions on the page have direct answers and the schema to match, so assistants can lift them as written. |
 
 What a single scan covers:
@@ -143,7 +143,7 @@ AI readiness isn't one team's job. Each check lands with whoever owns that part 
 
 ### What is SagBot?
 
-SagBot is a free AI-readiness checker. Enter a domain and it runs 40 checks, then gives two scores
+SagBot is a free AI-readiness checker. Enter a domain and it runs 44 checks, then gives two scores
 out of 100: Agent-ready and Answer-ready, with a copy-paste fix for every failing check.
 
 ### Why is it called SagBot?
