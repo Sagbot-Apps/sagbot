@@ -138,6 +138,7 @@ AI readiness isn't one team's job. Each check lands with whoever owns that part 
 
 - **[Improve your GEO in seven steps](guides/improve-geo.md)**: how to get your site cited by AI answer engines.
 - **[AI visibility: what you can fix, and what you can only track](guides/ai-visibility.md)**: where to spend effort first.
+- **[See which AI crawlers really visit your site](guides/ai-crawler-logs.md)**: find your access log, count AI crawler visits, tell real crawlers from fakes.
 
 ## FAQ
 
