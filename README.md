@@ -159,8 +159,17 @@ answers that assistants can repeat as written.
 
 ### Is SagBot free? Do I need an account?
 
-Yes, scans are free and need no account. Score tracking over time is on the way; you can sign up for
-it on any report.
+Yes, scans are free and need no account. A free account keeps your scan history, with the change in
+both scores since your last scan of each domain. Sign in with an email code, a passkey, Google or
+GitHub: there are no passwords. Score tracking over time is on the way; you can sign up for it on any
+report.
+
+### Can I hide my site's result?
+
+Yes, if you own the site. Sign in, add the `sagbot-verification=…` TXT record SagBot gives you to your
+domain's DNS, and hide the site from your dashboard. Visitors then see "The result is hidden by the
+owner": no scores on the page, its Markdown version or the share card, the badge shows `hidden`, and
+the page leaves Google. Signed-in users still see the full result. Make it public again at any time.
 
 ### Does blocking GPTBot remove my site from ChatGPT search?
 
