@@ -166,7 +166,7 @@ answers that assistants can repeat as written.
 Yes, scans are free and need no account. A free account keeps your scan history, with the change in
 both scores since your last scan of each domain. Sign in with an email code, a passkey, Google or
 GitHub: there are no passwords. Score tracking over time is on the way; you can sign up for it on any
-report.
+report. Paid plans are coming too: join the waitlist on [sagbot.app/pricing](https://sagbot.app/pricing).
 
 ### Can I hide my site's result?
 
@@ -230,6 +230,7 @@ What it fetches, hard limits, how redirects work and how free tools behave: **[b
 - How SagBot works: [sagbot.app/bot](https://sagbot.app/bot)
 - Who it's for: [sagbot.app/for](https://sagbot.app/for)
 - Free tools: [sagbot.app/tools](https://sagbot.app/tools)
+- Pricing (paid plans coming soon, free scans stay free): [sagbot.app/pricing](https://sagbot.app/pricing)
 - `llms.txt`: [sagbot.app/llms.txt](https://sagbot.app/llms.txt)
 - Privacy: [sagbot.app/privacy](https://sagbot.app/privacy)
 - Contact: [bot@sagbot.app](mailto:bot@sagbot.app)
