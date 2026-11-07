@@ -59,6 +59,11 @@ requests anything from a host, including every host a redirect leads to, it read
 and an opted-out host is not fetched. Its results are not cached, so a check after you fix your tags shows
 the new state.
 
+The [robots.txt validator](https://sagbot.app/tools/robots-txt-validator) fetches only `/robots.txt` of
+the domain you enter, live and without a cache, so you can re-check right after an edit. Because that file
+is where an opt-out lives, it is read even for opted-out sites, and nothing else is fetched. A file you paste
+instead is checked in your browser and never sent to SagBot.
+
 ## What are the hard limits?
 
 - GET and HEAD requests only
