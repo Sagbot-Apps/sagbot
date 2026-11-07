@@ -53,11 +53,17 @@ a normal scan. Other tools read your `robots.txt` first. If it opts SagBot out, 
 send your domain anywhere. Otherwise it asks an outside service. Some of those services test your site
 from their own servers, so those visits come from them, not from SagBot.
 
+The [Open Graph preview](https://sagbot.app/tools/open-graph-preview) is different: SagBot itself fetches
+the page you enter (any path, not only the homepage) and the image its `og:image` tag points to. Before it
+requests anything from a host, including every host a redirect leads to, it reads that host's `robots.txt`,
+and an opted-out host is not fetched. Its results are not cached, so a check after you fix your tags shows
+the new state.
+
 ## What are the hard limits?
 
 - GET and HEAD requests only
 - Gives up on a request after 8 seconds
-- Stops reading a response after 2 MB
+- Stops reading a response after 2 MB (Open Graph preview images: counted up to 8 MB, at most 2 MB kept)
 - Public hostnames only: no IP addresses, private networks or custom ports
 
 ## How do I block SagBot?

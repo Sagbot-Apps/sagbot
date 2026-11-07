@@ -120,6 +120,7 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 | [Security headers checker](https://sagbot.app/tools/security-headers-checker) | What HTTP security grade does this site get? |
 | [Wayback Machine checker](https://sagbot.app/tools/wayback-checker) | When was this domain first and last archived? |
 | [Wikipedia and Wikidata checker](https://sagbot.app/tools/wikipedia-wikidata-checker) | Does Wikidata list this domain as an official website? |
+| [Open Graph preview](https://sagbot.app/tools/open-graph-preview) | What card does this page show when someone shares its link, and which tags are missing? |
 
 ## Who is SagBot for?
 
