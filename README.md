@@ -8,7 +8,7 @@ then gives two scores out of 100: **Agent-ready** (can AI bots and agents reach 
 **Answer-ready** (will AI answer engines such as ChatGPT, Perplexity and Gemini cite it). Every failing
 check comes with a fix written for coding agents: paste it into Claude Code, Cursor or Copilot.
 
-No account. No install. About 20 seconds per scan.
+No install. About 20 seconds per scan. 3 free scans a day without an account; a free account gives you more.
 
 [![SagBot: see your site the way AI bots and agents do](https://sagbot.app/og-image.png)](https://sagbot.app/)
 
@@ -164,10 +164,10 @@ answers that assistants can repeat as written.
 
 ### Is SagBot free? Do I need an account?
 
-Yes, scans are free and need no account. A free account keeps your scan history, with the change in
-both scores since your last scan of each domain. Sign in with an email code, a passkey, Google or
-GitHub: there are no passwords. Score tracking over time is on the way; you can sign up for it on any
-report. Paid plans are coming too: join the waitlist on [sagbot.app/pricing](https://sagbot.app/pricing).
+Yes, it's free. Without an account you get 3 new scans a day. A free account adds rescans any time and
+keeps your scan history, with the change in both scores since your last scan of each domain. Sign in
+with an email code, a passkey, Google or GitHub: there are no passwords. Weekly checks with email
+alerts are on the way. Free tools stay free with no account and no daily limit. Paid plans are coming too: join the waitlist on [sagbot.app/pricing](https://sagbot.app/pricing).
 
 ### Can I hide my site's result?
 
