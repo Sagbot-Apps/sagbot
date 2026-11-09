@@ -22,6 +22,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 - [How are the scores calculated?](#how-are-the-scores-calculated)
 - [How does a scan work?](#how-does-a-scan-work)
 - [Add a score badge to your site](#add-a-score-badge-to-your-site)
+- [Scan from Claude Code (MCP)](#scan-from-claude-code-mcp)
 - [Free tools](#free-tools)
 - [Who is SagBot for?](#who-is-sagbot-for)
 - [Guides](#guides)
@@ -103,6 +104,28 @@ HTML:
 
 Every report has a generator that fills in your domain. `Agent` on the badge is the Agent-ready score
 and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `not scanned`.
+
+## Scan from Claude Code (MCP)
+
+With a free account, Claude Code (or any MCP client) can scan your site and fix what it finds without
+leaving your repo. Create a personal API token in [Account → Credentials](https://sagbot.app/account/credentials),
+then add the server with the command shown there:
+
+```bash
+claude mcp add --transport http sagbot https://mcp.sagbot.app/mcp \
+  --header "Authorization: Bearer sgb_…"
+```
+
+Don't add it with `--scope project`: that writes the token into `.mcp.json`, which usually gets committed.
+
+| Tool | What it does |
+|---|---|
+| `scan_site` | Scans a domain (`siteType`: `content`, `app` or `shop`; `rescan: true` for a fresh scan) and returns both scores plus every failed or partial check with its fix. |
+| `get_latest_scan` | Returns the newest stored scan of a domain without scanning. |
+
+SagBot scans the public site, so deploy your fixes (or use a public preview URL) before you rescan.
+Limits: 3 scans a minute per account; a rescan of the same site within 2 minutes returns the stored
+result. MCP scans show up in your dashboard marked "via MCP". Revoke a token any time from the same page.
 
 ## Free tools
 
@@ -200,7 +223,8 @@ doesn't crawl, so the rule takes effect at that scan.
 ### How do I apply the fixes?
 
 Copy one fix, or all of them as one prompt, paste it into Claude Code, Cursor or Copilot in your
-site's repo, and review the changes before you ship. Fixes are always in English.
+site's repo, and review the changes before you ship. Fixes are always in English. With a free account,
+Claude Code can also scan and fetch the fixes itself: see [Scan from Claude Code (MCP)](#scan-from-claude-code-mcp).
 
 ## For site owners: the SagBot fetcher
 
