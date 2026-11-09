@@ -55,6 +55,8 @@ Paste the first block into a shell on the server. It sets `BOTS` to the AI crawl
 
 The second block does the same across the rotated files, compressed or not; run it in the same shell so `BOTS` is still set. Training crawlers often lead the list. Visits from search and user agents are the ones tied to answers, so it’s worth noticing when they’re missing.
 
+Prefer not to count by hand? [SagBot’s AI crawler log analyzer](https://sagbot.app/tools/ai-crawler-log-analyzer): it reads the log in your browser and does not send it to SagBot.
+
 ```sh
 BOTS='GPTBot|OAI-SearchBot|ChatGPT-User|ClaudeBot|Claude-SearchBot|Claude-User'
 BOTS="$BOTS|PerplexityBot|Perplexity-User|Google-Agent|Applebot|Bytespider|CCBot"
