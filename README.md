@@ -22,7 +22,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 - [How are the scores calculated?](#how-are-the-scores-calculated)
 - [How does a scan work?](#how-does-a-scan-work)
 - [Add a score badge to your site](#add-a-score-badge-to-your-site)
-- [Scan from Claude Code (MCP)](#scan-from-claude-code-mcp)
+- [Scan from your coding agent (MCP)](#scan-from-your-coding-agent-mcp)
 - [Free tools](#free-tools)
 - [Who is SagBot for?](#who-is-sagbot-for)
 - [Guides](#guides)
@@ -105,18 +105,54 @@ HTML:
 Every report has a generator that fills in your domain. `Agent` on the badge is the Agent-ready score
 and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `not scanned`.
 
-## Scan from Claude Code (MCP)
+## Scan from your coding agent (MCP)
 
-With a free account, Claude Code (or any MCP client) can scan your site and fix what it finds without
-leaving your repo. Create a personal API token in [Account → Credentials](https://sagbot.app/account/credentials),
-then add the server with the command shown there:
+With a free account, your coding agent can scan your site and fix what it finds without leaving your repo.
+SagBot's MCP server is `https://mcp.sagbot.app/mcp` (Streamable HTTP). Create a personal API token in
+[Account → Credentials](https://sagbot.app/account/credentials) (it's shown once), then add the server.
+
+Claude Code, for every project:
 
 ```bash
-claude mcp add --transport http sagbot https://mcp.sagbot.app/mcp \
+claude mcp add --transport http --scope user sagbot https://mcp.sagbot.app/mcp \
   --header "Authorization: Bearer sgb_…"
 ```
 
-Don't add it with `--scope project`: that writes the token into `.mcp.json`, which usually gets committed.
+Cursor, Gemini CLI and Windsurf take the same JSON entry; only the URL key differs:
+
+```json
+{ "mcpServers": { "sagbot": { "url": "https://mcp.sagbot.app/mcp", "headers": { "Authorization": "Bearer sgb_…" } } } }
+```
+
+| Client | File | URL key |
+|---|---|---|
+| Cursor | `~/.cursor/mcp.json` | `url` |
+| Gemini CLI | `~/.gemini/settings.json` | `httpUrl` |
+| Windsurf | `~/.config/devin/mcp_config.json` (older installs: `~/.codeium/windsurf/mcp_config.json`) | `serverUrl` |
+
+OpenAI Codex CLI reads the token from an environment variable (`export SAGBOT_TOKEN="sgb_…"` in your shell
+profile, or a file it sources) and the server from `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.sagbot]
+url = "https://mcp.sagbot.app/mcp"
+bearer_token_env_var = "SAGBOT_TOKEN"
+```
+
+VS Code (Copilot agent mode) asks for the token instead of storing it, in `.vscode/mcp.json` or your user MCP
+configuration:
+
+```json
+{
+  "inputs": [{ "type": "promptString", "id": "sagbot-token", "description": "SagBot token", "password": true }],
+  "servers": {
+    "sagbot": { "type": "http", "url": "https://mcp.sagbot.app/mcp", "headers": { "Authorization": "Bearer ${input:sagbot-token}" } }
+  }
+}
+```
+
+Keep the token out of git: don't add it with `claude mcp add --scope project` (that writes `.mcp.json`) or in a
+committed config file. Only bearer tokens work; sign-in from the MCP client (OAuth) isn't supported yet.
 
 | Tool | What it does |
 |---|---|
@@ -224,7 +260,7 @@ doesn't crawl, so the rule takes effect at that scan.
 
 Copy one fix, or all of them as one prompt, paste it into Claude Code, Cursor or Copilot in your
 site's repo, and review the changes before you ship. Fixes are always in English. With a free account,
-Claude Code can also scan and fetch the fixes itself: see [Scan from Claude Code (MCP)](#scan-from-claude-code-mcp).
+your coding agent can also scan and fetch the fixes itself: see [Scan from your coding agent (MCP)](#scan-from-your-coding-agent-mcp).
 
 ## For site owners: the SagBot fetcher
 
