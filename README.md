@@ -110,6 +110,7 @@ and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `
 With a free account, your coding agent can scan your site and fix what it finds without leaving your repo.
 SagBot's MCP server is `https://mcp.sagbot.app/mcp` (Streamable HTTP). Create a personal API token in
 [Account → Credentials](https://sagbot.app/account/credentials) (it's shown once), then add the server.
+Step-by-step setup for each client, with your token filled in: [sagbot.app/mcp](https://sagbot.app/mcp).
 
 Claude Code, for every project:
 
