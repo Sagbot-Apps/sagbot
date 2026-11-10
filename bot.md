@@ -1,7 +1,8 @@
 # SagBot user agent: what it fetches and how to opt out
 
 **SagBot is the fetcher behind [sagbot.app](https://sagbot.app/).** It visits a site only when someone
-asks for a scan of it or runs a free tool on it, reads a handful of public files, and leaves. No crawling, no schedule.
+asks for a scan of it or runs a free tool on it, reads a handful of public files (the llms.txt generator: the
+`<head>` of up to 50 pages), and leaves. No crawling, no schedule.
 
 [README](README.md) · [Full page on sagbot.app](https://sagbot.app/bot)
 
@@ -63,6 +64,12 @@ The [robots.txt validator](https://sagbot.app/tools/robots-txt-validator) fetche
 the domain you enter, live and without a cache, so you can re-check right after an edit. Because that file
 is where an opt-out lives, it is read even for opted-out sites, and nothing else is fetched. A file you paste
 instead is checked in your browser and never sent to SagBot.
+
+The [llms.txt generator](https://sagbot.app/tools/llms-txt-generator) reads your `robots.txt` first: an
+opt-out stops it, and if `robots.txt` can't be read it uses only the homepage. Otherwise it reads your
+sitemap (or, without one, the links on your homepage) and then the `<head>` of up to 50 pages on the same
+host (and its `www.` twin), 6 at a time, skipping paths your `robots.txt` blocks for SagBot. It never reads a
+page body or other subdomains. The draft is kept for an hour, so repeat requests don't fetch your site again.
 
 ## What are the hard limits?
 
