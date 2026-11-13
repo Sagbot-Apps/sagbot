@@ -179,7 +179,7 @@ which competitors, and which URLs they cite. Base URL: `https://api.sagbot.app`.
 `Authorization: Bearer sgb_…`. `GET /v1/engines` and `GET /v1/health` need no token.
 
 **Pricing.** You pay per answer (one engine, one sample) from your prepaid USD balance on sagbot.app.
-Top up at [Account → Billing](https://sagbot.app/account/billing) ($25, $50 or $100). Failed engine runs are
+Top up at [Account → Billing](https://sagbot.app/account/billing) ($10, $25 or $50). Failed engine runs are
 returned to your balance automatically. When a check or scheduled scan takes your balance below $2.00, we email
 you once; topping up re-arms that email. See [Pricing](#pricing).
 
@@ -317,8 +317,8 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
 
-**Top up** at [Account → Billing](https://sagbot.app/account/billing): $25, $50 or $100. $25 buys 250 re-scans or
-about 714 AI answers. Billing shows your balance, how many days it lasts at your usage, and spend per day, feature
+**Top up** at [Account → Billing](https://sagbot.app/account/billing): $10, $25 or $50. $10 buys 100 re-scans or
+about 285 AI answers. Billing shows your balance, how many days it lasts at your usage, and spend per day, feature
 and site. When your balance drops below $2.00 we email you once. Failed AI engine runs go back to your balance.
 
 **Try AI visibility once for $1.** No balance needed: on [Dashboard → AI visibility](https://sagbot.app/dashboard/ai-visibility)
