@@ -25,6 +25,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 - [Scan from your coding agent (MCP)](#scan-from-your-coding-agent-mcp)
 - [AI visibility API](#ai-visibility-api)
 - [Free tools](#free-tools)
+- [Pricing](#pricing)
 - [Who is SagBot for?](#who-is-sagbot-for)
 - [Guides](#guides)
 - [FAQ](#faq)
@@ -180,12 +181,7 @@ which competitors, and which URLs they cite. Base URL: `https://api.sagbot.app`.
 **Pricing.** You pay per answer (one engine, one sample) from your prepaid USD balance on sagbot.app.
 Top up at [Account → Billing](https://sagbot.app/account/billing) ($25, $50 or $100). Failed engine runs are
 returned to your balance automatically. When a check or scheduled scan takes your balance below $2.00, we email
-you once; topping up re-arms that email.
-
-**Try it once for $1.** No balance needed: on [Dashboard → AI visibility](https://sagbot.app/dashboard/ai-visibility)
-enter your brand, domain, country, language and one question, pay $1 by card, and get answers from five engines
-(ChatGPT, Google AI Overviews, Gemini, Google AI Mode, Perplexity). Engines that fail get one free re-run; if
-nothing comes back even then, $1 goes to your balance.
+you once; topping up re-arms that email. See [Pricing](#pricing).
 
 | Engine id | Engine | Price per answer |
 |---|---|---|
@@ -308,6 +304,32 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 | [Wikipedia and Wikidata checker](https://sagbot.app/tools/wikipedia-wikidata-checker) | Does Wikidata list this domain as an official website? |
 | [Open Graph preview](https://sagbot.app/tools/open-graph-preview) | What card does this page show when someone shares its link, and which tags are missing? |
 
+## Pricing
+
+Scans and free tools stay free. Paid features are pay as you go: top up a prepaid USD balance and pay only for
+what runs. No subscription, and the balance doesn't expire. Full details: [sagbot.app/pricing](https://sagbot.app/pricing).
+
+| What | Price |
+|---|---|
+| Scan, rescan, all free tools | Free (3 scans a day without an account, no daily limit with a free account) |
+| [Scheduled re-scan](https://sagbot.app/dashboard/schedule) of a verified site, with an email when its score changes | $0.10 per scan (about $3 a month daily, $0.43 weekly) |
+| [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
+| AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
+| [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
+
+**Top up** at [Account → Billing](https://sagbot.app/account/billing): $25, $50 or $100. $25 buys 250 re-scans or
+about 714 AI answers. Billing shows your balance, how many days it lasts at your usage, and spend per day, feature
+and site. When your balance drops below $2.00 we email you once. Failed AI engine runs go back to your balance.
+
+**Try AI visibility once for $1.** No balance needed: on [Dashboard → AI visibility](https://sagbot.app/dashboard/ai-visibility)
+enter your brand, domain, country, language and one question, pay $1 by card, and get answers from five engines
+(ChatGPT, Google AI Overviews, Gemini, Google AI Mode, Perplexity). Engines that fail get one free re-run; if
+nothing comes back even then, $1 goes to your balance. The brand and question stay in your dashboard, so after a
+top-up you can run them again on all engines or on a schedule.
+
+Prices are in US dollars; taxes may be added at checkout. [Creem](https://creem.io) handles payments as our
+Merchant of Record. See the [Terms of service](https://sagbot.app/terms) and the [Refund policy](https://sagbot.app/refund).
+
 ## Who is SagBot for?
 
 AI readiness isn't one team's job. Each check lands with whoever owns that part of the site.
@@ -349,8 +371,9 @@ answers that assistants can repeat as written.
 
 Yes, it's free. Without an account you get 3 new scans a day. A free account adds rescans any time and
 keeps your scan history, with the change in both scores since your last scan of each domain. Sign in
-with an email code, a passkey, Google or GitHub: there are no passwords. Weekly checks with email
-alerts are on the way. Free tools stay free with no account and no daily limit. Paid plans are coming too: join the waitlist on [sagbot.app/pricing](https://sagbot.app/pricing).
+with an email code, a passkey, Google or GitHub: there are no passwords. Free tools stay free with no
+account and no daily limit. Scheduled re-scans, AI visibility checks and the white-label badge are paid as
+you go from a prepaid balance, with no subscription: see [Pricing](#pricing).
 
 ### Can I hide my site's result?
 
@@ -366,8 +389,11 @@ when someone asks about it. The SagBot report shows which of these your `robots.
 
 ### Does SagBot check whether ChatGPT already cites my site?
 
-No. It checks whether AI crawlers can reach your site and whether your pages are easy to quote.
-Whether an engine cites you also depends on your site's authority and on what people ask.
+Not the scan: it checks whether AI crawlers can reach your site and whether your pages are easy to quote.
+Whether an engine cites you also depends on your site's authority and on what people ask. To see that, use
+[AI visibility](https://sagbot.app/dashboard/ai-visibility): ask ChatGPT, Gemini, Perplexity, Google AI
+Overviews and others your customers' questions and see whether they mention and cite you. It's paid per answer
+(try it once for $1), or through the [AI visibility API](#ai-visibility-api).
 
 ### Will a scan slow my site down?
 
@@ -415,7 +441,8 @@ What it fetches, hard limits, how redirects work and how free tools behave: **[b
 - How SagBot works: [sagbot.app/bot](https://sagbot.app/bot)
 - Who it's for: [sagbot.app/for](https://sagbot.app/for)
 - Free tools: [sagbot.app/tools](https://sagbot.app/tools)
-- Pricing (paid plans coming soon, free scans stay free): [sagbot.app/pricing](https://sagbot.app/pricing)
+- Pricing (free scans, pay as you go for paid features): [sagbot.app/pricing](https://sagbot.app/pricing)
+- Terms: [sagbot.app/terms](https://sagbot.app/terms) · Refunds: [sagbot.app/refund](https://sagbot.app/refund)
 - `llms.txt`: [sagbot.app/llms.txt](https://sagbot.app/llms.txt)
 - Privacy: [sagbot.app/privacy](https://sagbot.app/privacy)
 - Contact: [bot@sagbot.app](mailto:bot@sagbot.app)
