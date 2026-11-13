@@ -175,7 +175,8 @@ which competitors, and which URLs they cite. Base URL: `https://api.sagbot.app`.
 
 **Pricing.** You pay per answer (one engine, one sample) from your prepaid USD balance on sagbot.app.
 Top up at [Account → Billing](https://sagbot.app/account/billing) ($25, $50 or $100). Failed engine runs are
-returned to your balance automatically.
+returned to your balance automatically. When a check or scheduled scan takes your balance below $2.00, we email
+you once; topping up re-arms that email.
 
 | Engine id | Engine | Price per answer |
 |---|---|---|
