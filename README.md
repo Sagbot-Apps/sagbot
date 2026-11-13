@@ -182,6 +182,11 @@ Top up at [Account → Billing](https://sagbot.app/account/billing) ($25, $50 or
 returned to your balance automatically. When a check or scheduled scan takes your balance below $2.00, we email
 you once; topping up re-arms that email.
 
+**Try it once for $1.** No balance needed: on [Dashboard → AI visibility](https://sagbot.app/dashboard/ai-visibility)
+enter your brand, domain, country, language and one question, pay $1 by card, and get answers from five engines
+(ChatGPT, Google AI Overviews, Gemini, Google AI Mode, Perplexity). Engines that fail get one free re-run; if
+nothing comes back even then, $1 goes to your balance.
+
 | Engine id | Engine | Price per answer |
 |---|---|---|
 | `chatgpt` | ChatGPT | $0.035 |
