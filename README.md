@@ -103,6 +103,10 @@ HTML:
 </a>
 ```
 
+**White-label badge.** The owner of a [verified site](https://sagbot.app/account) can replace "SagBot · host" with
+"AI score" for $1 a month per site, paid from the balance. Turn it on in the badge generator; if the balance can't
+pay the next month, the usual badge comes back until you top up.
+
 Every report has a generator that fills in your domain. `Agent` on the badge is the Agent-ready score
 and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `not scanned`.
 
