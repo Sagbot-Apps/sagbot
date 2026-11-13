@@ -321,8 +321,8 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 about 285 AI answers. Billing shows your balance, how many days it lasts at your usage, and spend per day, feature
 and site. When your balance drops below $2.00 we email you once. Failed AI engine runs go back to your balance.
 
-**Try AI visibility once for $1.** No balance needed: on [Dashboard → AI visibility](https://sagbot.app/dashboard/ai-visibility)
-enter your brand, domain, country, language and one question, pay $1 by card, and get answers from five engines
+**Try AI visibility once for $1.** No balance needed: on [sagbot.app/ai-visibility](https://sagbot.app/ai-visibility)
+(or Dashboard → AI visibility) enter your brand, domain, country, language and one question, pay $1 by card, and get answers from five engines
 (ChatGPT, Google AI Overviews, Gemini, Google AI Mode, Perplexity). Engines that fail get one free re-run; if
 nothing comes back even then, $1 goes to your balance. The brand and question stay in your dashboard, so after a
 top-up you can run them again on all engines or on a schedule.
@@ -393,7 +393,7 @@ Not the scan: it checks whether AI crawlers can reach your site and whether your
 Whether an engine cites you also depends on your site's authority and on what people ask. To see that, use
 [AI visibility](https://sagbot.app/dashboard/ai-visibility): ask ChatGPT, Gemini, Perplexity, Google AI
 Overviews and others your customers' questions and see whether they mention and cite you. It's paid per answer
-(try it once for $1), or through the [AI visibility API](#ai-visibility-api).
+([try it once for $1](https://sagbot.app/ai-visibility)), or through the [AI visibility API](#ai-visibility-api).
 
 ### Will a scan slow my site down?
 
