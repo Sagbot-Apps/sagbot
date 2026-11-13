@@ -1,8 +1,8 @@
 # SagBot user agent: what it fetches and how to opt out
 
-**SagBot is the fetcher behind [sagbot.app](https://sagbot.app/).** It visits a site only when someone
-asks for a scan of it or runs a free tool on it, reads a handful of public files (the llms.txt generator: the
-`<head>` of up to 50 pages), and leaves. No crawling, no schedule.
+**SagBot is the fetcher behind [sagbot.app](https://sagbot.app/).** It visits a site when someone
+asks for a scan of it or runs a free tool on it, or when the site's verified owner has turned on monitoring. It reads
+a handful of public files (the llms.txt generator: the `<head>` of up to 50 pages) and leaves. No crawling.
 
 [README](README.md) · [Full page on sagbot.app](https://sagbot.app/bot)
 
@@ -43,9 +43,20 @@ SagBot never follows links, submits forms, runs JavaScript or reads anything beh
 
 ## When does SagBot visit?
 
-Only when someone runs a scan or a free tool. A finished scan is reused for an hour, so new scans of your site in
+When someone runs a scan or a free tool, and, for monitored sites, on a schedule (see below). A finished scan is reused for an hour, so new scans of your site in
 that hour don't reach your server. Only a manual rescan fetches again, and at most once every two
 minutes.
+
+## Scheduled checks
+
+SagBot visits a site on a schedule only if its owner has verified the site and turned monitoring on. Every other
+site gets no scheduled visits. A monitored site gets:
+
+- an hourly light check (Instant monitoring): three requests (plus any redirects), for `/robots.txt`, `/llms.txt` and the homepage, to
+  see whether any of them changed;
+- a full scan daily, weekly or when the light check sees a change, about 25 to 30 requests each.
+
+A `robots.txt` that opts SagBot out (see below) limits both to a single `robots.txt` request: SagBot reads it first and fetches nothing else.
 
 ## What do the free tools do?
 
