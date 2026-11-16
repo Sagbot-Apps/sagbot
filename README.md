@@ -327,6 +327,10 @@ and site. When your balance drops below $2.00 we email you once. Failed AI engin
 nothing comes back even then, $1 goes to your balance. The brand and question stay in your dashboard, so after a
 top-up you can run them again on all engines or on a schedule.
 
+**Agencies and teams.** Running SagBot on many sites or for clients? Write to
+[sales@sagbot.app](mailto:sales@sagbot.app) for a volume discount on large top-ups, payment by invoice, help with
+setup, or custom features. API and MCP access, monitoring of many sites and the white-label badge work on any balance.
+
 Prices are in US dollars; taxes may be added at checkout. [Creem](https://creem.io) handles payments as our
 Merchant of Record. See the [Terms of service](https://sagbot.app/terms) and the [Refund policy](https://sagbot.app/refund).
 
