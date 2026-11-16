@@ -49,7 +49,7 @@ minutes.
 
 ## Scheduled checks
 
-SagBot visits a site on a schedule only if its owner has verified the site and turned monitoring on. Every other
+SagBot visits a site on a schedule only if its owner has verified the domain and turned monitoring on for that host. Every other
 site gets no scheduled visits. A monitored site gets:
 
 - an hourly light check (Instant monitoring): three requests (plus any redirects), for `/robots.txt`, `/llms.txt` and the homepage, to

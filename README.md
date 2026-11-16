@@ -104,7 +104,7 @@ HTML:
 </a>
 ```
 
-**White-label badge.** The owner of a [verified site](https://sagbot.app/account) can replace "SagBot · host" with
+**White-label badge.** The owner of a [verified site](https://sagbot.app/dashboard/domains) can replace "SagBot · host" with
 "AI score" for $1 a month per site, paid from the balance. Turn it on in the badge generator; if the balance can't
 pay the next month, the usual badge comes back until you top up.
 
@@ -312,7 +312,7 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | What | Price |
 |---|---|
 | Scan, rescan, all free tools | Free (3 scans a day without an account, no daily limit with a free account) |
-| [Scheduled re-scan](https://sagbot.app/dashboard/schedule) of a verified site, with an email when its score changes | $0.10 per scan (about $3 a month daily, $0.43 weekly) |
+| [Scheduled re-scan](https://sagbot.app/dashboard/schedule) of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes | $0.10 per scan (about $3 a month daily, $0.43 weekly) |
 | [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
