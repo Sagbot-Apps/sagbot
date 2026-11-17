@@ -168,7 +168,7 @@ committed config file. Only bearer tokens work; sign-in from the MCP client (OAu
 | `get_latest_scan` | Returns the newest stored scan of a domain without scanning. |
 
 SagBot scans the public site, so deploy your fixes (or use a public preview URL) before you rescan.
-Limits: 3 scans a minute per account; a rescan of the same site within 2 minutes returns the stored
+Limits: 3 scan calls a minute per account, MCP and Scan API together (stored answers count too); a rescan of the same site within 2 minutes returns the stored
 result. MCP scans show up in your dashboard marked "via MCP". Revoke a token any time from the same page.
 
 Cost: scanning your own verified domains is free, with no cap. For other sites, the first 3 new scans a day are
