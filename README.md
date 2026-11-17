@@ -23,6 +23,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 - [How does a scan work?](#how-does-a-scan-work)
 - [Add a score badge to your site](#add-a-score-badge-to-your-site)
 - [Scan from your coding agent (MCP)](#scan-from-your-coding-agent-mcp)
+- [Scan API](#scan-api)
 - [AI visibility API](#ai-visibility-api)
 - [Free tools](#free-tools)
 - [Pricing](#pricing)
@@ -170,117 +171,27 @@ SagBot scans the public site, so deploy your fixes (or use a public preview URL)
 Limits: 3 scans a minute per account; a rescan of the same site within 2 minutes returns the stored
 result. MCP scans show up in your dashboard marked "via MCP". Revoke a token any time from the same page.
 
+Cost: scanning your own verified domains is free, with no cap. For other sites, the first 3 new scans a day are
+free (shared with the Scan API below); after that each new scan costs $0.06 from your prepaid balance. Stored
+results are free to read again.
+
+Tool parameters, output fields, limits and errors: [sagbot.app/docs/mcp](https://sagbot.app/docs/mcp).
+
+## Scan API
+
+The same scan over plain REST, for scripts and CI: `POST https://api.sagbot.app/v1/scan` returns both scores and
+every failed or partial check with its fix; `GET /v1/scans/latest` reads the newest stored scan for free. Use the
+same personal API token as MCP. Your own verified domains are free; other sites get 3 free new scans a day (shared
+with MCP), then $0.06 each. Reference with curl examples: [sagbot.app/docs/scan-api](https://sagbot.app/docs/scan-api).
+
 ## AI visibility API
 
 Ask AI answer engines a question and see whether your brand is mentioned and cited, at what position, next to
-which competitors, and which URLs they cite. Base URL: `https://api.sagbot.app`.
-
-**Auth.** Create a token in [Account → Credentials](https://sagbot.app/account/credentials) and send it as
-`Authorization: Bearer sgb_…`. `GET /v1/engines` and `GET /v1/health` need no token.
-
-**Pricing.** You pay per answer (one engine, one sample) from your prepaid USD balance on sagbot.app.
-Top up at [Account → Billing](https://sagbot.app/account/billing) ($10, $25 or $50). Failed engine runs are
-returned to your balance automatically. When a check or scheduled scan takes your balance below $2.00, we email
-you once; topping up re-arms that email. See [Pricing](#pricing).
-
-| Engine id | Engine | Price per answer |
-|---|---|---|
-| `chatgpt` | ChatGPT | $0.035 |
-| `google_aio` | Google AI Overviews | $0.035 |
-| `gemini` | Gemini | $0.035 |
-| `google_ai_mode` | Google AI Mode | $0.035 |
-| `perplexity` | Perplexity | $0.035 |
-| `claude` | Claude (API, web search on) | $0.06 |
-| `chatgpt_api` | ChatGPT (API, web search on) | $0.06 |
-| `gemini_api` | Gemini (API, web search on) | $0.06 |
-
-A check costs the sum of `price × samples` over its engines. Without `engines`, a check runs the five
-$0.035 engines. `GET /v1/engines` is the live catalog (prices, status, supported options).
-
-### Create a check
-
-`POST /v1/check` takes `query` (≤ 300 characters), `brand` (`name`, optional `domain` and `aliases`), and
-optionally `competitors`, `engines`, `country` (ISO code, default `US`), `language` (default `en`) and
-`samples` (1 to 5, default 1; more samples give a mention rate with a 95% interval). Add `"dry_run": true` to get
-the price without paying. Send an `Idempotency-Key` header (≤ 64 characters) to retry safely: a repeat returns the
-same check and never charges twice.
-
-```sh
-curl https://api.sagbot.app/v1/check \
-  -H "Authorization: Bearer $SGB" -H "content-type: application/json" \
-  -d '{
-    "query": "best tool to check if my website is ready for ai agents",
-    "brand": { "name": "SagBot", "domain": "sagbot.app" },
-    "competitors": ["Acme Audit"],
-    "engines": ["chatgpt", "perplexity"],
-    "samples": 3
-  }'
-```
-
-```json
-{ "id": "chk_0f8e6c1d2b3a49e8a7c6b5d4e3f2a1b0", "status": "queued", "cost_usd": 0.21 }
-```
-
-The response headers `X-Cost-USD` and `X-Balance-USD` show the price and your balance after paying.
-
-### Get a check
-
-Poll `GET /v1/checks/{id}` until `status` is `done`, `partial` (some answers failed and were refunded) or
-`failed`. It is `queued` or `running` before that. Only the token owner can read a check.
-
-```sh
-curl https://api.sagbot.app/v1/checks/chk_0f8e6c1d2b3a49e8a7c6b5d4e3f2a1b0 -H "Authorization: Bearer $SGB"
-```
-
-Each entry in `results` has `mentioned_rate` with its 95% interval `ci95`, `cited_rate`, `avg_position`
-(1 = mentioned first), per-competitor rates, the `citations` (URLs, most cited first) and, for API engines,
-the web searches the model ran (`fan_out`). Shortened:
-
-```json
-{
-  "id": "chk_0f8e6c1d2b3a49e8a7c6b5d4e3f2a1b0",
-  "status": "done",
-  "cost_usd": 0.21,
-  "refunded_usd": 0,
-  "results": [
-    {
-      "engine": "chatgpt",
-      "samples": 3,
-      "samples_ok": 3,
-      "mentioned_rate": 0.67,
-      "ci95": [0.21, 0.94],
-      "cited_rate": 0.33,
-      "avg_position": 1.5,
-      "competitors": [{ "name": "Acme Audit", "mentioned_rate": 0.33, "avg_position": 2 }],
-      "citations": [{ "url": "https://sagbot.app/", "domain": "sagbot.app", "count": 1, "brand": true }]
-    }
-  ]
-}
-```
-
-### List engines and health
-
-```sh
-curl https://api.sagbot.app/v1/engines   # id, label, price_usd, default, status, supported options
-curl https://api.sagbot.app/v1/health    # success rate and p95 latency per engine, last 24 hours
-```
-
-`GET /v1/usage?days=30` (token required) returns what you spent per day and engine; refunded answers are not counted.
-
-### Errors and limits
-
-Errors look like `{ "error": { "code": "…", "message": "…" } }`.
-
-| Status | `code` | Meaning |
-|---|---|---|
-| 400 | `invalid_request` | Bad body or parameter; the message says which |
-| 401 | `unauthorized` | Missing or invalid token |
-| 402 | `insufficient_balance` | The check costs more than your balance; top up and retry with a new `Idempotency-Key` |
-| 404 | `not_found` | Unknown check id, or a check that is not yours |
-| 413 | `body_too_large` | Request body too large |
-| 429 | `rate_limited` | Too many requests; wait a minute |
-
-Limits: 10 paid checks a minute per token, and 60 authenticated requests a minute per IP address.
+which competitors, and which URLs they cite: `POST https://api.sagbot.app/v1/check`, then poll
+`GET /v1/checks/{id}`. You pay per answer from your prepaid balance: $0.035 (ChatGPT, Google AI Overviews, Gemini,
+Google AI Mode, Perplexity) or $0.06 (Claude, ChatGPT API, Gemini API). Reference:
+[sagbot.app/docs/visibility-api](https://sagbot.app/docs/visibility-api); OpenAPI:
+[api.sagbot.app/openapi.yaml](https://api.sagbot.app/openapi.yaml).
 
 ## Free tools
 
@@ -311,10 +222,11 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 
 | What | Price |
 |---|---|
-| Scan, rescan, all free tools | Free (3 scans a day without an account, no daily limit with a free account) |
+| Website scan, rescan, all free tools | Free (3 scans a day without an account, no daily limit with a free account) |
 | [Scheduled re-scan](https://sagbot.app/dashboard/schedule) of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes | $0.10 per scan (about $3 a month daily, $0.43 weekly) |
 | [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
+| New scan of a site that isn't your verified domain, via the [Scan API](#scan-api) or MCP, after 3 free a day (shared by both; your verified domains are always free) | $0.06 per scan |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
 
 **Top up** at [Account → Billing](https://sagbot.app/account/billing): $10, $25 or $50. $10 buys 100 re-scans or
@@ -446,6 +358,7 @@ What it fetches, hard limits, how redirects work and how free tools behave: **[b
 - Who it's for: [sagbot.app/for](https://sagbot.app/for)
 - Free tools: [sagbot.app/tools](https://sagbot.app/tools)
 - Pricing (free scans, pay as you go for paid features): [sagbot.app/pricing](https://sagbot.app/pricing)
+- API and MCP docs (English): [sagbot.app/docs](https://sagbot.app/docs) · OpenAPI: [api.sagbot.app/openapi.yaml](https://api.sagbot.app/openapi.yaml)
 - Terms: [sagbot.app/terms](https://sagbot.app/terms) · Refunds: [sagbot.app/refund](https://sagbot.app/refund)
 - `llms.txt`: [sagbot.app/llms.txt](https://sagbot.app/llms.txt)
 - Privacy: [sagbot.app/privacy](https://sagbot.app/privacy)
