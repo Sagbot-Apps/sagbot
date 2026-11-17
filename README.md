@@ -81,6 +81,11 @@ Each domain has one page, and it always shows the latest result, so that's the l
 `/r/{id}` links redirect to it. Every SagBot page is also served as Markdown:
 `curl -H 'Accept: text/markdown' https://sagbot.app/d/{host}`.
 
+**Scan from any page.** Save this as a bookmark and click it on any site to scan that site:
+`javascript:location.href='https://sagbot.app/?utm_source=bookmarklet&utm_medium=bookmark&domain='+encodeURIComponent(location.host)`.
+On iPhone and iPad, add the [SagBot Scan URL](https://www.icloud.com/shortcuts/cb8bd2cd95f7480297ba862dbd5dda15)
+shortcut and pick it from the Share menu.
+
 ## Add a score badge to your site
 
 Show your scores on your site or GitHub profile. The badge is live: it updates within an hour of a new
