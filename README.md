@@ -301,7 +301,10 @@ you go from a prepaid balance, with no subscription: see [Pricing](#pricing).
 Yes, if you own the site. Sign in, add the `sagbot-verification=…` TXT record SagBot gives you to your
 domain's DNS, and hide the site from your dashboard. Visitors then see "The result is hidden by the
 owner": no scores on the page, its Markdown version or the share card, the badge shows `hidden`, and
-the page leaves Google. Signed-in users still see the full result. Make it public again at any time.
+the page leaves Google. Only you and SagBot admins see the full result, on the site, in the Scan API and in
+MCP; anyone else's scan of the site is refused (`site_hidden`) and isn't charged. Make it public again at
+any time. SagBot can also hide a site itself, for example for illegal content or a legal request: the
+grounds and how to appeal are in the [Terms](https://sagbot.app/terms#hiding).
 
 ### Does blocking GPTBot remove my site from ChatGPT search?
 
