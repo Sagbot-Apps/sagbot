@@ -37,7 +37,9 @@ At most these requests, in this order. `robots.txt` comes first and can stop the
 
 If your homepage redirects to another site, SagBot scans that site instead, starting from its
 homepage and honouring its `robots.txt`. Every other request stays on the scanned site: redirects
-elsewhere are refused.
+elsewhere are refused. The report stays on the page of the domain you entered and doesn't count as a
+scan of the other site: its own page, history and monitors only show scans someone ran for it. A
+redirect within the same site (`www` to the apex, a subdomain) moves the report to where it landed.
 
 SagBot never follows links, submits forms, runs JavaScript or reads anything behind a login.
 
