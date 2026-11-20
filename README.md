@@ -290,7 +290,8 @@ answers that assistants can repeat as written.
 
 ### Is SagBot free? Do I need an account?
 
-Yes, it's free. Without an account you get 3 new scans a day. A free account adds rescans any time and
+Yes, it's free. Without an account you get 3 new scans a day. A scan of a site that's down (no DNS, a timeout, or a
+server error such as HTTP 530) gets no scores and doesn't count toward the 3. A free account adds rescans any time and
 keeps your scan history, with the change in both scores since your last scan of each domain. Sign in
 with an email code, a passkey, Google or GitHub: there are no passwords. Free tools stay free with no
 account and no daily limit. Scheduled re-scans, AI visibility checks and the white-label badge are paid as
