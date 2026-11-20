@@ -90,6 +90,7 @@ page body or other subdomains. The draft is kept for an hour, so repeat requests
 - Gives up on a request after 8 seconds
 - Stops reading a response after 2 MB (Open Graph preview images: counted up to 8 MB, at most 2 MB kept)
 - Public hostnames only: no IP addresses, private networks or custom ports
+- No `.ru`, `.su`, `.рф` or `.рус` domains, and no redirects onto them
 
 ## How do I block SagBot?
 
