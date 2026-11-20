@@ -20,7 +20,7 @@ Can AI crawlers, search bots and agents reach the site and find machine-readable
 
 | Check | ID | Weight | Site types | Why it matters |
 |---|---|---|---|---|
-| [robots.txt](https://www.rfc-editor.org/rfc/rfc9309) | `agent-robots` | 3 | All | robots.txt is the first file every crawler and AI agent reads to learn what it may fetch. |
+| [robots.txt](https://www.rfc-editor.org/rfc/rfc9309) | `agent-robots` | 3 | All | robots.txt is the file crawlers and AI agents read first to learn what they may fetch. |
 | [XML sitemap](https://www.sitemaps.org/protocol.html) | `agent-sitemap` | 2 | All | A sitemap lists every page so crawlers and agents don't have to discover them by following links. |
 | [Link headers](https://www.rfc-editor.org/rfc/rfc8288) | `agent-link-headers` | 2 | All | Link response headers point agents at machine-readable versions of your site without parsing HTML. |
 
@@ -28,7 +28,7 @@ Can AI crawlers, search bots and agents reach the site and find machine-readable
 
 | Check | ID | Weight | Site types | Why it matters |
 |---|---|---|---|---|
-| [Markdown for agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/) | `agent-markdown` | 3 | All | Serving Markdown on `Accept: text/markdown` gives agents clean text at a fraction of the tokens. |
+| [Markdown for agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/) | `agent-markdown` | 3 | All | Serving Markdown on `Accept: text/markdown` gives agents clean text with fewer tokens than HTML. |
 | [llms.txt](https://llmstxt.org/) | `agent-llms-txt` | 3 | All | llms.txt gives language models a curated, plain-text map of your site. |
 
 ### Bot access
@@ -94,7 +94,7 @@ Generative engine optimization: can a model tell who you are and quote you?
 | [Schema matches the page](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) | `geo-schema-visible` | 1 | Structured data | Structured data must describe what visitors see; markup that doesn't match the page is ignored. |
 | [sameAs profile links](https://schema.org/sameAs) | `geo-sameas` | 2 | Entity | sameAs links tie your entity to profiles AI already knows, so it's not confused with others. |
 | [Entity name consistency](https://developers.google.com/search/docs/appearance/site-names) | `geo-entity-name` | 1 | Entity | Using the same name in title, og:site_name and schema helps AI recognise one entity. |
-| [Citable server-rendered text](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) | `geo-citable-text` | 3 | Citability | Most AI crawlers don't run JavaScript: they can only cite text in the HTML. |
+| [Citable server-rendered text](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) | `geo-citable-text` | 3 | Citability | Many AI crawlers don't run JavaScript, so they can only cite text in the HTML. |
 
 All GEO checks run for every site type. Schema matching is not applicable when the JSON-LD has no FAQ questions, headlines or product names to compare.
 

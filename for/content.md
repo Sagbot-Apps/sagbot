@@ -74,7 +74,7 @@ accountable. Undated pages lose out to fresher ones on anything time-sensitive. 
 
 ## Make sure the text is in the HTML
 
-Most AI crawlers don't run JavaScript. If your words only appear after a script runs, the crawler
+Many AI crawlers don't run JavaScript. If your words only appear after a script runs, the crawler
 sees an empty shell. Ask your developers to render the text on the server; you'll know it worked
 when the words show up in "view source".
 

@@ -31,7 +31,7 @@ Full list of the 24 AI bots SagBot checks: [for/developers.md](../for/developers
 
 ## 2. Put your text in the HTML
 
-Most AI crawlers don't run JavaScript. Render your main text on the server, with real `h1` and `h2`
+Many AI crawlers don't run JavaScript. Render your main text on the server, with real `h1` and `h2`
 headings, so the crawler gets words instead of an empty app shell.
 
 ```bash

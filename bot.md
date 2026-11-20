@@ -101,7 +101,7 @@ Disallow: /
 ```
 
 SagBot reads `robots.txt` before anything else, so after this it makes no other request to your
-site. Anyone who tries to scan your site sees "Couldn't scan — site opted out of SagBot".
+site. Anyone who tries to scan your site sees "Couldn't scan example.com: Site opted out of SagBot in robots.txt".
 
 SagBot also follows a site-wide `User-agent: *` group: if it disallows `/`, SagBot stays out. To let
 SagBot in anyway, give it its own group:
