@@ -368,6 +368,7 @@ What it fetches, hard limits, how redirects work and how free tools behave: **[b
 - Free tools: [sagbot.app/tools](https://sagbot.app/tools)
 - Pricing (free scans, pay as you go for paid features): [sagbot.app/pricing](https://sagbot.app/pricing)
 - API and MCP docs (English): [sagbot.app/docs](https://sagbot.app/docs) · OpenAPI: [api.sagbot.app/openapi.yaml](https://api.sagbot.app/openapi.yaml)
+- Service status (site, API, MCP, checked every minute): [status.sagbot.app](https://status.sagbot.app/)
 - Terms: [sagbot.app/terms](https://sagbot.app/terms) · Refunds: [sagbot.app/refund](https://sagbot.app/refund)
 - `llms.txt`: [sagbot.app/llms.txt](https://sagbot.app/llms.txt)
 - Privacy: [sagbot.app/privacy](https://sagbot.app/privacy)
