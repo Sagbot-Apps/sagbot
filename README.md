@@ -210,6 +210,7 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 | [robots.txt validator](https://sagbot.app/tools/robots-txt-validator) | Is this `robots.txt` valid, line by line, and which search, AI and SEO crawlers may reach a given URL? |
 | [AI crawler log analyzer](https://sagbot.app/tools/ai-crawler-log-analyzer) | Which AI crawlers visit my site, are they genuine, and which pages fail for them? Reads your access log in the browser; nothing is uploaded. |
 | [Schema checker](https://sagbot.app/tools/schema-checker) | Is the JSON-LD on this homepage valid? |
+| [Schema markup generator](https://sagbot.app/tools/schema-markup-generator) | Build JSON-LD for Organization, LocalBusiness, Product, Article, FAQPage and more, prefilled from a page's own markup, then copy it. |
 | [JSON-LD visualizer](https://sagbot.app/tools/json-ld-visualizer) | Which entities does this page's JSON-LD describe, how do they link, and roughly how may search show them? |
 | [Open Page Rank checker](https://sagbot.app/tools/open-page-rank-checker) | What is this domain's Open Page Rank score? |
 | [SSL checker](https://sagbot.app/tools/ssl-checker) | What SSL/TLS grade does this site get? |
