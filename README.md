@@ -204,7 +204,7 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 
 | Tool | What it answers |
 |---|---|
-| [AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) | Which questions are people likely to ask AI about this site's field? Signed in, check the first 5 in ChatGPT for free and see which brands it names. |
+| [AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) | Which questions are people likely to ask AI about this site's field? Signed in, check the first 5 in ChatGPT for free and see which brands it names and which pages it got its answers from. |
 | [llms.txt checker](https://sagbot.app/tools/llms-txt-checker) | Does this site serve a well-formed `llms.txt` file? |
 | [llms.txt generator](https://sagbot.app/tools/llms-txt-generator) | Draft an `llms.txt` from up to 50 of this site's pages, edit it, then copy or download it. |
 | [AI bots in robots.txt](https://sagbot.app/tools/ai-bots-robots-checker) | What does this site's `robots.txt` tell AI bots? |
