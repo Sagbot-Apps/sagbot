@@ -28,6 +28,8 @@ credits you. Pick one name and use it in your page title, your social preview an
 <!-- and "name": "Acme" in your Organization JSON-LD -->
 ```
 
+To see whether ChatGPT names you today, try [the AI prompt finder](https://sagbot.app/tools/ai-prompt-finder): it writes the questions buyers are likely to ask and checks 5 of them, free with an account.
+
 **SagBot reads** the name in your site's structured data and checks that it matches the `<title>` and `og:site_name`.
 
 ## Say who is behind the site

@@ -37,8 +37,11 @@ How often you're mentioned in answers, your share of answers against competitors
 of those mentions. You can't change these directly; they follow from your site, your coverage and
 your reputation over time.
 
-Measuring them takes a different kind of tool: one that runs the same prompts against assistants on
-a schedule and records who gets named. SagBot doesn't do that; it checks your site.
+Measuring them takes a different kind of tool: one that asks assistants the same questions on a
+schedule and records who gets named. SagBot has one, AI visibility, paid per answer; the site scan
+stays free.
+
+Not sure which questions to track? [SagBot’s AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) writes about 20 from your homepage and checks the first 5 in ChatGPT, free with an account.
 
 ## Where should you start?
 
