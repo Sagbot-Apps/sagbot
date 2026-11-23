@@ -230,7 +230,7 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | What | Price |
 |---|---|
 | Website scan, rescan, all free tools | Free (3 scans a day without an account, no daily limit with a free account) |
-| [Scheduled re-scan](https://sagbot.app/dashboard/schedule) of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes | $0.10 per scan (about $3 a month daily, $0.43 weekly) |
+| [Score monitoring](https://sagbot.app/monitoring): scheduled re-scans of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes. Weekly, Daily, or Instant (free hourly check of robots.txt, llms.txt and the homepage; a full scan only on change, plus one a week) | $0.10 per scan (about $3 a month daily, $0.43 weekly; Instant about $0.43 for a quiet site) |
 | [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
 | New scan of a site that isn't your verified domain, via the [Scan API](#scan-api) or MCP, after 3 free a day (shared by both; your verified domains are always free) | $0.06 per scan |
