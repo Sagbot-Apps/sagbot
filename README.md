@@ -268,6 +268,7 @@ AI readiness isn't one team's job. Each check lands with whoever owns that part 
 | Content teams | How do I write pages that AI answers quote? | [for/content.md](for/content.md) |
 | Online shops | Can AI shopping agents find my products and check out? | [for/shops.md](for/shops.md) |
 | SaaS and API products | Can AI agents discover and connect to my product? | [for/saas.md](for/saas.md) |
+| Agencies | What should I fix first on a client's site? | [for/agencies.md](for/agencies.md) |
 
 ## Guides
 
