@@ -235,7 +235,7 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
 | New scan of a site that isn't your verified domain, via the [Scan API](#scan-api) or MCP, after 3 free a day (shared by both; your verified domains are always free) | $0.06 per scan |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
-| [Agency report](https://sagbot.app/dashboard/reports): a white-label, frozen report on any site for your client (scores before and after, fixed and broken checks, top fixes, AI visibility), fresh scan included | $1.99 per report |
+| [Agency report](https://sagbot.app/agency-reports): a white-label, frozen report on any site for your client (scores before and after, fixed and broken checks, top fixes, AI visibility), fresh scan included | $1.99 per report |
 
 **Top up** at [Account → Billing](https://sagbot.app/account/billing): $10, $25 or $50. $10 buys 100 re-scans or
 about 285 AI answers. Billing shows your balance, how many days it lasts at your usage, and spend per day, feature
@@ -247,7 +247,7 @@ and site. When your balance drops below $2.00 we email you once. Failed AI engin
 nothing comes back even then, $1 goes to your balance. The brand and question stay in your dashboard, so after a
 top-up you can run them again on all engines or on a schedule.
 
-**Agency reports.** Set your brand (name, logo, colour, contact) under Dashboard → Reports, then generate a report on any site from the dashboard, `POST https://api.sagbot.app/v1/reports` or the MCP tool `create_report`. Each report is a web page under your brand with no SagBot name on it, prints to PDF and never changes after it is made. Weekly or monthly schedules continue each report where the last one ended. API reference: [sagbot.app/docs/scan-api#reports](https://sagbot.app/docs/scan-api#reports).
+**Agency reports.** Set your brand (name, logo, colour, contact) under Dashboard → Reports, then generate a report on any site from the dashboard, `POST https://api.sagbot.app/v1/reports` or the MCP tool `create_report`. Each report is a web page under your brand with no SagBot name on it, prints to PDF and never changes after it is made. Weekly or monthly schedules continue each report where the last one ended. What a report shows, prices and a live sample: [sagbot.app/agency-reports](https://sagbot.app/agency-reports). API reference: [sagbot.app/docs/scan-api#reports](https://sagbot.app/docs/scan-api#reports).
 
 **Agencies and teams.** Running SagBot on many sites or for clients? Write to
 [sales@sagbot.app](mailto:sales@sagbot.app) for a volume discount on large top-ups, payment by invoice, help with
