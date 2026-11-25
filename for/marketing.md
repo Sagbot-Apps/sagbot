@@ -62,7 +62,8 @@ This is the part PR feeds: every profile and listing you earn is one more link t
 }
 ```
 
-**SagBot reads** the `sameAs` links in your site's Organization or Person data, and counts them.
+**SagBot reads** the `sameAs` links in your site's Organization or Person data, and counts them. It also says when
+none of them points to Wikidata, Wikipedia, LinkedIn, Crunchbase, GitHub or ORCID; the score stays the same.
 
 ## Decide how your link looks when shared
 

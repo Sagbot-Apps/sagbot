@@ -92,7 +92,8 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 ```
 
-**SagBot reads** the `Content-Signal` lines in your `robots.txt`.
+**SagBot reads** the `Content-Signal` lines in your `robots.txt`. A `User-agent: __usage_ai-training` group with
+rules (IETF aipref, honoured by Anthropic and, from February 2027, by Bing) also passes; it covers training only.
 
 ## See which of these your site passes
 

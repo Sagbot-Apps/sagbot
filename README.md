@@ -48,7 +48,7 @@ The checks fall into four groups:
 What a single scan covers:
 
 - `robots.txt` rules for 24 AI bots from OpenAI, Anthropic, Google, Perplexity, Apple, Meta, Amazon, Mistral, ByteDance, DuckDuckGo and Common Crawl
-- `Content-Signal` (search, AI answers, AI training)
+- `Content-Signal` (search, AI answers, AI training) and the IETF aipref `__usage_ai-training` group
 - XML sitemap, `llms.txt` and `llms-full.txt`
 - Markdown for agents (`Accept: text/markdown`) and `Link` headers
 - JSON-LD, Organization / Person entity, `sameAs`, OpenGraph, meta description, title, canonical, `hreflang`
