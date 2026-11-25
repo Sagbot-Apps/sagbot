@@ -215,7 +215,7 @@ To see where AI already cites a site or one page, use the
 [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker) (signed in; a result can be shared by link) or
 `POST https://api.sagbot.app/v1/mentions` (MCP tool `find_ai_citations`). Both return the questions ChatGPT and Google AI Overviews answer with a link to it, with each
 answer, the pages cited and how often the question is asked. $0.49 per lookup; the first one per account is free,
-and a lookup that finds nothing costs nothing.
+and a lookup that finds nothing gets $0.24 back, so it costs $0.25.
 
 ## Free tools
 
@@ -252,7 +252,7 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | [Score monitoring](https://sagbot.app/monitoring): scheduled re-scans of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes. Weekly, Daily, or Instant (free hourly check of robots.txt, llms.txt and the homepage; a full scan only on change, plus one a week) | $0.10 per scan (about $3 a month daily, $0.43 weekly; Instant about $0.43 for a quiet site) |
 | [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
-| AI citations lookup: where ChatGPT and Google AI Overviews link to a site or page, on the [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker), the AI visibility dashboard, the API or MCP | $0.49 per lookup (first one per account free; nothing charged when nothing is found) |
+| AI citations lookup: where ChatGPT and Google AI Overviews link to a site or page, on the [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker), the AI visibility dashboard, the API or MCP | $0.49 per lookup (first one per account free; $0.25 when nothing is found) |
 | New scan of a site that isn't your verified domain, via the [Scan API](#scan-api) or MCP, after 3 free a day (shared by both; your verified domains are always free) | $0.06 per scan |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
 | [Agency report](https://sagbot.app/agency-reports): a white-label, frozen report on any site for your client (scores before and after, fixed and broken checks, top fixes, AI visibility), fresh scan included | $1.99 per report |
