@@ -139,6 +139,9 @@ operate a crawler or agent; SagBot shows it as advice, not a score.
 Run a free scan at **[sagbot.app](https://sagbot.app/)**. Each failing check comes with a fix
 written for a coding agent: paste it into Claude Code, Cursor or Copilot.
 
+To keep them passing, add the [SagBot GitHub Action](https://sagbot.app/ci): a pull request that makes a check
+worse fails, with the details in a comment.
+
 ---
 
 **Also for your team:** [Marketing and PR](marketing.md) · [SEO teams](seo.md) · [Content teams](content.md) · [Online shops](shops.md) · [SaaS and API products](saas.md) · [Agencies](agencies.md)

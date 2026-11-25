@@ -191,7 +191,8 @@ with MCP), then $0.06 each. Reference with curl examples: [sagbot.app/docs/scan-
 
 In GitHub CI, the [SagBot AI-readiness scan](https://github.com/marketplace/actions/sagbot-ai-readiness-scan) action
 runs it for you: it fails the job when a check that passed before now fails, a score drops under your floor or a
-check you require fails, and posts the scores and what changed to the pull request.
+check you require fails, and posts the scores and what changed to the pull request. Setup for Cloudflare Pages,
+Vercel and production: [sagbot.app/ci](https://sagbot.app/ci).
 
 ```yaml
 - uses: Sagbot-Apps/scan-action@v1
