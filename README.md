@@ -198,6 +198,11 @@ Google AI Mode, Perplexity) or $0.06 (Claude, ChatGPT API, Gemini API). Referenc
 [sagbot.app/docs/visibility-api](https://sagbot.app/docs/visibility-api); OpenAPI:
 [api.sagbot.app/openapi.yaml](https://api.sagbot.app/openapi.yaml).
 
+To see where AI already cites a site or one page, `POST https://api.sagbot.app/v1/mentions` (MCP tool
+`find_ai_citations`) returns the questions ChatGPT and Google AI Overviews answer with a link to it, with each
+answer, the pages cited and how often the question is asked. $0.49 per lookup; the first one per account is free,
+and a lookup that finds nothing costs nothing.
+
 ## Free tools
 
 Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tools) checks one thing about a domain.
@@ -205,6 +210,7 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 | Tool | What it answers |
 |---|---|
 | [AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) | Which questions are people likely to ask AI about this site's field? Signed in, check the first 5 in ChatGPT for free and see which brands it names and which pages it got its answers from, then check whether one of your pages covers a question. |
+| [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker) | Which questions do ChatGPT and Google AI Overviews answer with a link to this site or page? Signed in, the first lookup is free, then $0.49. A result can be shared by link. |
 | [llms.txt checker](https://sagbot.app/tools/llms-txt-checker) | Does this site serve a well-formed `llms.txt` file? |
 | [llms.txt generator](https://sagbot.app/tools/llms-txt-generator) | Draft an `llms.txt` from up to 50 of this site's pages, edit it, then copy or download it. |
 | [AI bots in robots.txt](https://sagbot.app/tools/ai-bots-robots-checker) | What does this site's `robots.txt` tell AI bots? |
@@ -233,6 +239,7 @@ what runs. No subscription, and the balance doesn't expire. Full details: [sagbo
 | [Score monitoring](https://sagbot.app/monitoring): scheduled re-scans of any host of a verified domain (e.g. `example.com` and `dev.example.com`), with an email when its score changes. Weekly, Daily, or Instant (free hourly check of robots.txt, llms.txt and the homepage; a full scan only on change, plus one a week) | $0.10 per scan (about $3 a month daily, $0.43 weekly; Instant about $0.43 for a quiet site) |
 | [AI visibility](https://sagbot.app/dashboard/ai-visibility) answer from ChatGPT, Gemini, Perplexity, Google AI Overviews or AI Mode | $0.035 per answer |
 | AI visibility answer from Claude, ChatGPT API or Gemini API | $0.06 per answer |
+| AI citations lookup: where ChatGPT and Google AI Overviews link to a site or page, on the [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker), the AI visibility dashboard, the API or MCP | $0.49 per lookup (first one per account free; nothing charged when nothing is found) |
 | New scan of a site that isn't your verified domain, via the [Scan API](#scan-api) or MCP, after 3 free a day (shared by both; your verified domains are always free) | $0.06 per scan |
 | [White-label badge](#add-a-score-badge-to-your-site) | $1 per site a month |
 | [Agency report](https://sagbot.app/agency-reports): a white-label, frozen report on any site for your client (scores before and after, fixed and broken checks, top fixes, AI visibility), fresh scan included | $1.99 per report |

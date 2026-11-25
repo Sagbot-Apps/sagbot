@@ -41,7 +41,7 @@ Measuring them takes a different kind of tool: one that asks assistants the same
 schedule and records who gets named. SagBot has one, AI visibility, paid per answer; the site scan
 stays free.
 
-Not sure which questions to track? [SagBot’s AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) writes about 20 from your homepage and checks the first 5 in ChatGPT, free with an account.
+Not sure which questions to track? [SagBot’s AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) writes about 20 from your homepage and checks the first 5 in ChatGPT, free with an account. To see where AI already links to you, the [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker) lists the questions ChatGPT and Google AI Overviews answer with a link to your site or one of its pages (first lookup free with an account).
 
 ## Where should you start?
 
