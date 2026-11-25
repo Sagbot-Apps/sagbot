@@ -189,6 +189,18 @@ every failed or partial check with its fix; `GET /v1/scans/latest` reads the new
 same personal API token as MCP. Your own verified domains are free; other sites get 3 free new scans a day (shared
 with MCP), then $0.06 each. Reference with curl examples: [sagbot.app/docs/scan-api](https://sagbot.app/docs/scan-api).
 
+In GitHub CI, the [SagBot AI-readiness scan](https://github.com/marketplace/actions/sagbot-ai-readiness-scan) action
+runs it for you: it fails the job when a check that passed before now fails, a score drops under your floor or a
+check you require fails, and posts the scores and what changed to the pull request.
+
+```yaml
+- uses: Sagbot-Apps/scan-action@v1
+  with:
+    token: ${{ secrets.SAGBOT_TOKEN }}
+    url: ${{ steps.deploy.outputs.deployment-url }} # a public preview, or production after a deploy
+    baseline: example.com # production: the "before"
+```
+
 ## AI visibility API
 
 Ask AI answer engines a question and see whether your brand is mentioned and cited, at what position, next to
