@@ -198,8 +198,9 @@ Google AI Mode, Perplexity) or $0.06 (Claude, ChatGPT API, Gemini API). Referenc
 [sagbot.app/docs/visibility-api](https://sagbot.app/docs/visibility-api); OpenAPI:
 [api.sagbot.app/openapi.yaml](https://api.sagbot.app/openapi.yaml).
 
-To see where AI already cites a site or one page, `POST https://api.sagbot.app/v1/mentions` (MCP tool
-`find_ai_citations`) returns the questions ChatGPT and Google AI Overviews answer with a link to it, with each
+To see where AI already cites a site or one page, use the
+[AI Citation Checker](https://sagbot.app/tools/ai-citation-checker) (signed in; a result can be shared by link) or
+`POST https://api.sagbot.app/v1/mentions` (MCP tool `find_ai_citations`). Both return the questions ChatGPT and Google AI Overviews answer with a link to it, with each
 answer, the pages cited and how often the question is asked. $0.49 per lookup; the first one per account is free,
 and a lookup that finds nothing costs nothing.
 
@@ -210,7 +211,6 @@ Need one answer instead of a full scan? Each [free tool](https://sagbot.app/tool
 | Tool | What it answers |
 |---|---|
 | [AI prompt finder](https://sagbot.app/tools/ai-prompt-finder) | Which questions are people likely to ask AI about this site's field? Signed in, check the first 5 in ChatGPT for free and see which brands it names and which pages it got its answers from, then check whether one of your pages covers a question. |
-| [AI Citation Checker](https://sagbot.app/tools/ai-citation-checker) | Which questions do ChatGPT and Google AI Overviews answer with a link to this site or page? Signed in, the first lookup is free, then $0.49. A result can be shared by link. |
 | [llms.txt checker](https://sagbot.app/tools/llms-txt-checker) | Does this site serve a well-formed `llms.txt` file? |
 | [llms.txt generator](https://sagbot.app/tools/llms-txt-generator) | Draft an `llms.txt` from up to 50 of this site's pages, edit it, then copy or download it. |
 | [AI bots in robots.txt](https://sagbot.app/tools/ai-bots-robots-checker) | What does this site's `robots.txt` tell AI bots? |
