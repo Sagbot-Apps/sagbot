@@ -3,12 +3,21 @@
 [![Scan your site](https://img.shields.io/badge/Scan%20your%20site-sagbot.app-111?style=for-the-badge)](https://sagbot.app/)
 [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app)
 
+[![MDN HTTP Observatory grade for sagbot.app](https://img.shields.io/mozilla-observatory/grade/sagbot.app?label=observatory)](https://developer.mozilla.org/en-US/observatory/analyze?host=sagbot.app)
+[![Security Headers grade for sagbot.app: A](https://img.shields.io/badge/security%20headers-A-brightgreen)](https://securityheaders.com/?q=https%3A%2F%2Fsagbot.app%2F&followRedirects=on)
+[![SSL Labs grade for sagbot.app: B](https://img.shields.io/badge/SSL%20Labs-B-yellow)](https://www.ssllabs.com/ssltest/analyze.html?d=sagbot.app&latest)
+[![PageSpeed Insights performance for sagbot.app, desktop: 99](https://img.shields.io/badge/PageSpeed%20Insights-99-brightgreen)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsagbot.app%2F&form_factor=desktop)
+
 **[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 44 checks,
 then gives two scores out of 100: **Agent-ready** (can AI bots and agents reach and use the site) and
 **Answer-ready** (will AI answer engines such as ChatGPT, Perplexity and Gemini cite it). Every failing
 check comes with a fix written for coding agents: paste it into Claude Code, Cursor or Copilot.
 
 No install. About 20 seconds per scan. 3 free scans a day without an account; a free account gives you more.
+
+[![Site status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dhome%26label%3DSite)](https://status.sagbot.app/)
+[![API status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dapi%26label%3DAPI)](https://status.sagbot.app/)
+[![MCP status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dmcp%26label%3DMCP)](https://status.sagbot.app/)
 
 [![SagBot: see your site the way AI bots and agents do](https://sagbot.app/og-image.png)](https://sagbot.app/)
 
