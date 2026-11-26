@@ -133,6 +133,10 @@ Your AI tool can scan your site and fix what it finds without leaving your repo.
 in (a new email gets a free account) and press Allow. Setup for each client:
 [sagbot.app/mcp](https://sagbot.app/mcp).
 
+The [SagBot plugin](https://github.com/Sagbot-Apps/sagbot-plugin) bundles the server with a scan, fix and rescan
+skill for Claude Code, Codex, GitHub Copilot, Cursor, Gemini CLI, Devin, Antigravity and Kimi Code. In Claude Code:
+`/plugin marketplace add Sagbot-Apps/sagbot-plugin`, then `/plugin install sagbot@sagbot`.
+
 Claude Code, for every project, then `/mcp` → `sagbot` → Authenticate:
 
 ```bash
