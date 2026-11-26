@@ -18,6 +18,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 [![Site status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dhome%26label%3DSite)](https://status.sagbot.app/)
 [![API status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dapi%26label%3DAPI)](https://status.sagbot.app/)
 [![MCP status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.sagbot.app%2Fapi%2Fbadge%3Fid%3Dmcp%26label%3DMCP)](https://status.sagbot.app/)
+[![mcptry](https://mcptry.com/badge/app.sagbot/sagbot)](https://mcptry.com/servers/app.sagbot/sagbot)
 
 [![SagBot: see your site the way AI bots and agents do](https://sagbot.app/og-image.png)](https://sagbot.app/)
 
