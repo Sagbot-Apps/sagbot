@@ -119,53 +119,44 @@ and `SEO·GEO·AEO` is the Answer-ready score. A domain without a result shows `
 
 ## Scan from your coding agent (MCP)
 
-With a free account, your coding agent can scan your site and fix what it finds without leaving your repo.
-SagBot's MCP server is `https://mcp.sagbot.app/mcp` (Streamable HTTP). Create a personal API token in
-[Account → Credentials](https://sagbot.app/account/credentials) (it's shown once), then add the server.
-Step-by-step setup for each client, with your token filled in: [sagbot.app/mcp](https://sagbot.app/mcp).
+Your AI tool can scan your site and fix what it finds without leaving your repo. SagBot's MCP server is
+`https://mcp.sagbot.app/mcp` (Streamable HTTP). Add that URL to your tool: it opens SagBot in your browser, you sign
+in (a new email gets a free account) and press Allow. Setup for each client:
+[sagbot.app/mcp](https://sagbot.app/mcp).
 
-Claude Code, for every project:
+Claude Code, for every project, then `/mcp` → `sagbot` → Authenticate:
+
+```bash
+claude mcp add --transport http --scope user sagbot https://mcp.sagbot.app/mcp
+```
+
+Claude.ai and Claude Desktop: Customize → Connectors → Add custom connector, paste the URL, Sign in now.
+ChatGPT: Plugins → Add custom MCP server, Server URL, authentication OAuth.
+
+Clients with a config file take the URL alone:
+
+| Client | File | Entry |
+|---|---|---|
+| Cursor | `~/.cursor/mcp.json` | `{ "mcpServers": { "sagbot": { "url": "https://mcp.sagbot.app/mcp" } } }` |
+| Gemini CLI | `~/.gemini/settings.json` | `httpUrl` instead of `url`, then `/mcp auth sagbot` |
+| Windsurf | `~/.config/devin/mcp_config.json` | `serverUrl` instead of `url` |
+| VS Code (Copilot agent mode) | `.vscode/mcp.json` | `{ "servers": { "sagbot": { "type": "http", "url": "https://mcp.sagbot.app/mcp" } } }` |
+| OpenAI Codex CLI | `~/.codex/config.toml` | `[mcp_servers.sagbot]` with `url = "https://mcp.sagbot.app/mcp"`, then `codex mcp login sagbot` |
+
+Connected apps are listed in [Account → Credentials](https://sagbot.app/account/credentials), where you can revoke
+each one.
+
+For CI, scripts or a client that only sends a header, use a personal API token from the same page (it's shown
+once) as `Authorization: Bearer sgb_…`:
 
 ```bash
 claude mcp add --transport http --scope user sagbot https://mcp.sagbot.app/mcp \
   --header "Authorization: Bearer sgb_…"
 ```
 
-Cursor, Gemini CLI and Windsurf take the same JSON entry; only the URL key differs:
-
-```json
-{ "mcpServers": { "sagbot": { "url": "https://mcp.sagbot.app/mcp", "headers": { "Authorization": "Bearer sgb_…" } } } }
-```
-
-| Client | File | URL key |
-|---|---|---|
-| Cursor | `~/.cursor/mcp.json` | `url` |
-| Gemini CLI | `~/.gemini/settings.json` | `httpUrl` |
-| Windsurf | `~/.config/devin/mcp_config.json` (older installs: `~/.codeium/windsurf/mcp_config.json`) | `serverUrl` |
-
-OpenAI Codex CLI reads the token from an environment variable (`export SAGBOT_TOKEN="sgb_…"` in your shell
-profile, or a file it sources) and the server from `~/.codex/config.toml`:
-
-```toml
-[mcp_servers.sagbot]
-url = "https://mcp.sagbot.app/mcp"
-bearer_token_env_var = "SAGBOT_TOKEN"
-```
-
-VS Code (Copilot agent mode) asks for the token instead of storing it, in `.vscode/mcp.json` or your user MCP
-configuration:
-
-```json
-{
-  "inputs": [{ "type": "promptString", "id": "sagbot-token", "description": "SagBot token", "password": true }],
-  "servers": {
-    "sagbot": { "type": "http", "url": "https://mcp.sagbot.app/mcp", "headers": { "Authorization": "Bearer ${input:sagbot-token}" } }
-  }
-}
-```
-
-Keep the token out of git: don't add it with `claude mcp add --scope project` (that writes `.mcp.json`) or in a
-committed config file. Only bearer tokens work; sign-in from the MCP client (OAuth) isn't supported yet.
+Token setups for every client are on [sagbot.app/mcp](https://sagbot.app/mcp) under "With a token". Keep the token
+out of git: don't add it with `claude mcp add --scope project` (that writes `.mcp.json`) or in a committed config
+file.
 
 | Tool | What it does |
 |---|---|
@@ -174,7 +165,8 @@ committed config file. Only bearer tokens work; sign-in from the MCP client (OAu
 
 SagBot scans the public site, so deploy your fixes (or use a public preview URL) before you rescan.
 Limits: 3 scan calls a minute per account, MCP and Scan API together (stored answers count too); a rescan of the same site within 2 minutes returns the stored
-result. MCP scans show up in your dashboard marked "via MCP". Revoke a token any time from the same page.
+result. MCP scans show up in your dashboard marked "via MCP". Revoke a connected app or a token any time in
+Account → Credentials.
 
 Cost: scanning your own verified domains is free, with no cap. For other sites, the first 3 new scans a day are
 free (shared with the Scan API below); after that each new scan costs $0.06 from your prepaid balance. Stored
