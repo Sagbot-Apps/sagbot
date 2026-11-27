@@ -1,6 +1,6 @@
-# All 44 SagBot checks: AI readiness, SEO, GEO and AEO
+# All 45 SagBot checks: AI readiness, SEO, GEO and AEO
 
-SagBot runs 44 checks on a site and groups them into four buckets. **Agent** checks make up the
+SagBot runs 45 checks on a site and groups them into four buckets. **Agent** checks make up the
 Agent-ready score. **SEO**, **GEO** and **AEO** checks make up the Answer-ready score (the average of
 the three). Each check below lists its weight in its bucket and the site types it runs for, and links to the spec or documentation it follows.
 
@@ -29,6 +29,7 @@ Can AI crawlers, search bots and agents reach the site and find machine-readable
 | Check | ID | Weight | Site types | Why it matters |
 |---|---|---|---|---|
 | [Markdown for agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/) | `agent-markdown` | 3 | All | Serving Markdown on `Accept: text/markdown` gives agents clean text with fewer tokens than HTML. |
+| [Search for agents](https://developers.cloudflare.com/ai-search/how-to/search-for-agents/) | `agent-search` | Advice | All | A search endpoint lets agents find the right page with one request instead of crawling the site. |
 | [llms.txt](https://llmstxt.org/) | `agent-llms-txt` | 3 | All | llms.txt gives language models a curated, plain-text map of your site. |
 
 ### Bot access
@@ -124,4 +125,4 @@ Each team guide explains its checks with examples:
 
 ---
 
-See how your site scores on all 44: **[sagbot.app](https://sagbot.app/)**.
+See how your site scores on all 45: **[sagbot.app](https://sagbot.app/)**.

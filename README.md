@@ -9,7 +9,7 @@
 [![SSL Labs grade for sagbot.app: A+](https://img.shields.io/badge/SSL%20Labs-A%2B-brightgreen)](https://www.ssllabs.com/ssltest/analyze.html?d=sagbot.app&latest)
 [![PageSpeed Insights performance for sagbot.app, desktop: 99](https://img.shields.io/badge/PageSpeed%20Insights-99-brightgreen)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsagbot.app%2F&form_factor=desktop)
 
-**[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 44 checks,
+**[SagBot](https://sagbot.app/) is a free AI-readiness checker.** Enter a domain and it runs 45 checks,
 then gives two scores out of 100: **Agent-ready** (can AI bots and agents reach and use the site) and
 **Answer-ready** (will AI answer engines such as ChatGPT, Perplexity and Gemini cite it). Every failing
 check comes with a fix written for coding agents: paste it into Claude Code, Cursor or Copilot.
@@ -25,7 +25,7 @@ No install. About 20 seconds per scan. 3 free scans a day without an account; a 
 
 **Run a scan:** [sagbot.app](https://sagbot.app/) ·
 **Scan from a link:** `https://sagbot.app/?domain=example.com` ·
-**All 44 checks:** [checks.md](checks.md)
+**All 45 checks:** [checks.md](checks.md)
 
 ## Contents
 
@@ -62,6 +62,7 @@ What a single scan covers:
 - `Content-Signal` (search, AI answers, AI training) and the IETF aipref `__usage_ai-training` group
 - XML sitemap, `llms.txt` and `llms-full.txt`
 - Markdown for agents (`Accept: text/markdown`) and `Link` headers
+- Search for agents: a site search endpoint at `/.well-known/search` with `agent:*` meta tags (Cloudflare Search for Agents)
 - JSON-LD, Organization / Person entity, `sameAs`, OpenGraph, meta description, title, canonical, `hreflang`
 - Concise answer paragraphs, question headings, FAQPage / QAPage schema, author and date
 - Agent protocols for APIs and apps: RFC 9727 API catalog, OAuth / OIDC discovery, RFC 9728 protected resource metadata, MCP server card, A2A agent card, agent skills index, `ai-catalog`, `auth.md`, WebMCP
@@ -307,7 +308,7 @@ AI readiness isn't one team's job. Each check lands with whoever owns that part 
 
 ### What is SagBot?
 
-SagBot is a free AI-readiness checker. Enter a domain and it runs 44 checks, then gives two scores
+SagBot is a free AI-readiness checker. Enter a domain and it runs 45 checks, then gives two scores
 out of 100: Agent-ready and Answer-ready, with a copy-paste fix for every failing check.
 
 ### Why is it called SagBot?
