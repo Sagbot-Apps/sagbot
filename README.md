@@ -1,6 +1,7 @@
 # SagBot: free AI-readiness checker for websites
 
-[![Scan your site](https://img.shields.io/badge/Scan%20your%20site-sagbot.app-111?style=for-the-badge)](https://sagbot.app/)
+[![Enter your domain at sagbot.app and scan it](assets/scan-input.svg)](https://sagbot.app/)
+
 [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app)
 
 [![MDN HTTP Observatory grade for sagbot.app](https://img.shields.io/mozilla-observatory/grade/sagbot.app?label=observatory)](https://developer.mozilla.org/en-US/observatory/analyze?host=sagbot.app)
