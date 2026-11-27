@@ -1,6 +1,6 @@
 # SagBot: free AI-readiness checker for websites
 
-[![Enter your domain at sagbot.app and scan it](assets/scan-input.svg)](https://sagbot.app/)
+[![Enter your domain at sagbot.app and scan it](assets/scan-input.svg)](https://sagbot.app/#scan)
 
 [![SagBot score for sagbot.app](https://sagbot.app/badge/sagbot.app.svg)](https://sagbot.app/d/sagbot.app)
 
