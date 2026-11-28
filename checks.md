@@ -9,7 +9,7 @@ the three). Each check below lists its weight in its bucket and the site types i
 **How to read the tables**
 
 - **Weight**: a pass earns the full weight, a partial earns half, a fail earns nothing.
-- **Advice**: shown with a fix, never scored. Used for specs that are new, optional or can't be verified from outside.
+- **Advice**: never scored. Used for specs that are new, optional or can't be verified from outside. The result shows what SagBot found: *found* (there and working), *warning* (there but broken, with the fix) or *advice* (not there yet, with how to add it).
 - **Site types**: *All*, *API or app*, or *Shop*. A check outside its site type still runs if your site publishes that file anyway; otherwise it shows as not applicable.
 
 ## Agent checks (Agent-ready score)

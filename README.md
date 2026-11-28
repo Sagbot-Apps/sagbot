@@ -78,7 +78,7 @@ fail earns nothing.
 
 - **Agent-ready** = weighted share of passed Agent checks, 0–100.
 - **Answer-ready** = average of the SEO, GEO and AEO scores, 0–100.
-- Checks marked *advice* are shown with a fix but never change a score (new or optional specs such as WebMCP, `auth.md`, x402).
+- Checks marked *advice* never change a score (new or optional specs such as WebMCP, `auth.md`, x402). They show *found*, *warning* (there but broken) or a tip with how to add it. The scan API and MCP list them separately as `advice`, never among the fixes.
 - Checks SagBot couldn't see (a timeout, a blocked request) count as *couldn't check*, never as a fail.
 - Fixes are ranked by how many points each one adds, biggest first.
 
